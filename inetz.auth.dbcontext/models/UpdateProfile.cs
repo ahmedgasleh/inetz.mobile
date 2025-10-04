@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace inetz.authserver.models
+namespace inetz.auth.dbcontext.models
 {
     [Keyless]
     public class UpdateProfile

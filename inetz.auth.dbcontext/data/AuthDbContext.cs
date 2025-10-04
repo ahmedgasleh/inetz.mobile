@@ -1,8 +1,8 @@
-﻿using inetz.authserver.models;
+﻿using inetz.auth.dbcontext.models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace inetz.authserver.data
+namespace inetz.auth.dbcontext.data
 {
     public partial class AuthDbContext : DbContext
     {

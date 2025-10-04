@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "D:\\Development\\C# .Net 8\\inetz.mobile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F933FAB-95F9-456A-B304-43CF902C2136}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,53 +75,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserProfile.cs",
-              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\UserProfile.cs",
-              "RelativeDocumentMoniker": "inetz.authserver\\models\\UserProfile.cs",
-              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\UserProfile.cs",
-              "RelativeToolTip": "inetz.authserver\\models\\UserProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "inetz.authserver\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs \u2B24",
+              "RelativeToolTip": "inetz.authserver\\Controllers\\AuthController.cs \u2B24",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:23:21.025Z",
+              "WhenOpened": "2025-10-04T16:32:49.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateProfile.cs",
-              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\UpdateProfile.cs",
-              "RelativeDocumentMoniker": "inetz.authserver\\models\\UpdateProfile.cs",
-              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\UpdateProfile.cs",
-              "RelativeToolTip": "inetz.authserver\\models\\UpdateProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Program.cs",
+              "RelativeDocumentMoniker": "inetz.authserver\\Program.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Program.cs",
+              "RelativeToolTip": "inetz.authserver\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:22:40.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "inetz.authserver\\models\\RefreshToken.cs",
-              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\models\\RefreshToken.cs",
-              "RelativeToolTip": "inetz.authserver\\models\\RefreshToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:21:48.113Z",
+              "WhenOpened": "2025-10-04T16:29:16.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthDbContext.cs",
-              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\data\\AuthDbContext.cs",
-              "RelativeDocumentMoniker": "inetz.authserver\\data\\AuthDbContext.cs",
-              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\data\\AuthDbContext.cs",
-              "RelativeToolTip": "inetz.authserver\\data\\AuthDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
+              "RelativeDocumentMoniker": "inetz.auth.dbcontext\\services\\TokenService.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
+              "RelativeToolTip": "inetz.auth.dbcontext\\services\\TokenService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:16:38.518Z",
+              "WhenOpened": "2025-10-04T16:28:35.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PasswordHelper.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
+              "RelativeDocumentMoniker": "inetz.authserver\\helpers\\PasswordHelper.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
+              "RelativeToolTip": "inetz.authserver\\helpers\\PasswordHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:26:33.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\appsettings.json",
+              "RelativeDocumentMoniker": "inetz.authserver\\appsettings.json",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\appsettings.json",
+              "RelativeToolTip": "inetz.authserver\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-04T16:25:16.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "RelativeToolTip": "inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:00:30.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateProfile.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "RelativeToolTip": "inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:00:22.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "RelativeToolTip": "inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T15:58:48.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "RelativeToolTip": "inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T15:58:28.409Z",
               "EditorCaption": ""
             }
           ]

@@ -1,11 +1,6 @@
-@inetz.authserver_HostAddress = http://localhost:5085
+@inetz.authserver_HostAddress = http://localhost:5036
 
-GET {{inetz.authserver_HostAddress}}/todos/
-Accept: application/json
-
-###
-
-GET {{inetz.authserver_HostAddress}}/todos/1
+GET {{inetz.authserver_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

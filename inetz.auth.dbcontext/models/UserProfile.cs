@@ -1,4 +1,4 @@
-﻿namespace inetz.authserver.models
+﻿namespace inetz.auth.dbcontext.models
 {
     public partial class UserProfile
     {
