@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\Development\\C# .Net 8\\inetz.mobile\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\c# .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,19 +151,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml.cs",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T20:57:41.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml.cs",
               "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
               "RelativeToolTip": "inetz.ifinance.app\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T18:11:04.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml",
@@ -172,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml",
@@ -191,14 +208,14 @@
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
               "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml.cs",
               "RelativeToolTip": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T18:08:50.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "HomePage.xaml",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\HomePage.xaml",
@@ -211,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\LoginPage.xaml",
@@ -224,20 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegistrationStep2Page.xaml",
-              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
-              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
-              "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T17:53:14.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
@@ -250,20 +254,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "RegistrationStep2ViewModel.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
               "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
               "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwC4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T17:00:33.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
+              "Title": "RegistrationStep2Page.xaml",
+              "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "ToolTip": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-04T17:53:14.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\Properties\\launchSettings.json",
@@ -276,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "RegistrationStep1ViewModel.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
@@ -289,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "RegistrationStep1Page.xaml",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
@@ -302,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\MauiProgram.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\MauiProgram.cs",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\AuthService.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\AuthService.cs",
@@ -328,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ApiService.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\ApiService.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\ApiService.cs",
@@ -341,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\AuthResponse.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\AuthResponse.cs",
@@ -354,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\LoginRequest.cs",
@@ -367,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UserRegistration.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\UserRegistration.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\UserRegistration.cs",
@@ -380,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\Controllers\\AuthController.cs",
@@ -393,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\Program.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\Program.cs",
@@ -406,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\services\\TokenService.cs",
@@ -419,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "PasswordHelper.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\helpers\\PasswordHelper.cs",
@@ -432,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.authserver\\appsettings.json",
               "RelativeDocumentMoniker": "inetz.authserver\\appsettings.json",
@@ -445,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UserProfile.cs",
@@ -458,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "UpdateProfile.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UpdateProfile.cs",
@@ -471,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\RefreshToken.cs",
@@ -484,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AuthDbContext.cs",
               "DocumentMoniker": "D:\\Development\\C# .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\data\\AuthDbContext.cs",

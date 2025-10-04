@@ -16,11 +16,13 @@ namespace inetz.ifinance.app.viewmodels
 
         private readonly AuthService _authService;
         private readonly INavigation _navigation;
+        private readonly LoginViewModel _loginViewModel;
 
-        public RegistrationStep2ViewModel ( AuthService authService, INavigation navigation )
+        public RegistrationStep2ViewModel ( AuthService authService, INavigation navigation, LoginViewModel loginViewModel )
         {
             _authService = authService;
             _navigation = navigation;
+            _loginViewModel = loginViewModel;
         }
 
         [RelayCommand]
@@ -40,7 +42,7 @@ namespace inetz.ifinance.app.viewmodels
 
             if (result?.Success == true)
             {
-                await _navigation.PushAsync(new LoginPage());
+                await _navigation.PushAsync(new LoginPage(_loginViewModel));
             }
             else
             {
