@@ -13,19 +13,12 @@ namespace inetz.ifinance.app.viewmodels
         [ObservableProperty] private string password;
         [ObservableProperty] private string errorMessage;
 
-        private readonly INavigation _navigation;
-
-        public RegistrationStep1ViewModel ( INavigation navigation )
-        {
-            _navigation = navigation;
-        }
-
         [RelayCommand]
         private async Task NextAsync ()
         {
             if (!ValidateInputs())
             {
-                ErrorMessage = "Please enter valid phone, email, and password.";
+                ErrorMessage = "Fix input errors";
                 return;
             }
 
@@ -33,7 +26,7 @@ namespace inetz.ifinance.app.viewmodels
             Preferences.Set("TempEmail", Email);
             Preferences.Set("TempPassword", Password);
 
-            await _navigation.PushAsync(new RegistrationStep2Page());
+            await Shell.Current.GoToAsync(nameof(RegistrationStep2Page));
         }
 
         private bool ValidateInputs ()
@@ -47,4 +40,3 @@ namespace inetz.ifinance.app.viewmodels
             return true;
         }
     }
-}

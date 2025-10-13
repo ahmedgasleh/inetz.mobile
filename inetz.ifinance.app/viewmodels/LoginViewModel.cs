@@ -17,34 +17,41 @@ namespace inetz.ifinance.app.viewmodels
         [ObservableProperty] private string password;
         [ObservableProperty] private string errorMessage;
 
-        private readonly AuthService _authService;
-        private readonly INavigation _navigation;
+        private readonly AuthService _auth_service;
+        private readonly DeviceService _device_service;
 
-        public LoginViewModel ( AuthService authService, INavigation navigation )
+        public LoginViewModel ( AuthService authService, DeviceService deviceService )
         {
-            _authService = authService;
-            _navigation = navigation;
+            _auth_service = authService ?? throw new ArgumentNullException(nameof(authService));
+            _device_service = deviceService ?? throw new ArgumentNullException(nameof(deviceService));
         }
 
         [RelayCommand]
         private async Task LoginAsync ()
         {
-            var request = new LoginRequest
+            try
             {
-                PhoneNumber = PhoneNumber,
-                Password = Password,
-                DeviceId = $"{DeviceInfo.Current.Platform}-{DeviceInfo.Current.Model}"
-            };
+                var req = new LoginRequest
+                {
+                    PhoneNumber = PhoneNumber,
+                    Password = Password,
+                    DeviceId = await _device_service.GetOrCreateDeviceIdAsync()
+                };
 
-            var result = await _authService.LoginAsync(request);
-            if (result?.Success == true)
-            {
-                await _navigation.PushAsync(new HomePage());
+                var res = await _auth_service.LoginAsync(req);
+                if (res?.Success == true)
+                {
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                        Shell.Current.GoToAsync(nameof(HomePage)));
+                }
+                else
+                {
+                    ErrorMessage = res?.Message ?? "Login failed";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ErrorMessage = result?.Message ?? "Invalid login.";
+                ErrorMessage = ex.Message;
             }
         }
     }
-}

@@ -14,39 +14,51 @@ namespace inetz.ifinance.app.viewmodels
         [ObservableProperty] private string address;
         [ObservableProperty] private string errorMessage;
 
-        private readonly AuthService _authService;
-        private readonly INavigation _navigation;
-        private readonly LoginViewModel _loginViewModel;
+        private readonly AuthService _auth_service;
+        private readonly DeviceService _device_service;
 
-        public RegistrationStep2ViewModel ( AuthService authService, INavigation navigation, LoginViewModel loginViewModel )
+        public RegistrationStep2ViewModel ( AuthService authService, DeviceService deviceService )
         {
-            _authService = authService;
-            _navigation = navigation;
-            _loginViewModel = loginViewModel;
+            _auth_service = authService ?? throw new ArgumentNullException(nameof(authService));
+            _device_service = deviceService ?? throw new ArgumentNullException(nameof(deviceService));
         }
 
         [RelayCommand]
         private async Task CompleteAsync ()
         {
-            var model = new UserRegistration
+            try
             {
-                PhoneNumber = Preferences.Get("TempPhone", ""),
-                Email = Preferences.Get("TempEmail", ""),
-                Password = Preferences.Get("TempPassword", ""),
-                Name = Name,
-                Address = Address,
-                DeviceId = $"{DeviceInfo.Current.Platform}-{DeviceInfo.Current.Model}"
-            };
+                var model = new UserRegistration
+                {
+                    PhoneNumber = Preferences.Get("TempPhone", ""),
+                    Email = Preferences.Get("TempEmail", ""),
+                    Password = Preferences.Get("TempPassword", ""),
+                    Name = Name ?? string.Empty,
+                    Address = Address ?? string.Empty,
+                    DeviceId = await _device_service.GetOrCreateDeviceIdAsync()
+                };
 
-            var result = await _authService.RegisterAsync(model);
+                var result = await _auth_service.RegisterAsync(model);
 
-            if (result?.Success == true)
-            {
-                await _navigation.PushAsync(new LoginPage(_loginViewModel));
+                if (result?.Success == true)
+                {
+                    // Clear temp prefs
+                    Preferences.Remove("TempPhone");
+                    Preferences.Remove("TempEmail");
+                    Preferences.Remove("TempPassword");
+
+                    // Navigate to LoginPage
+                    await MainThread.InvokeOnMainThreadAsync(() =>
+                        Shell.Current.GoToAsync($"//{nameof(LoginPage)}"));
+                }
+                else
+                {
+                    ErrorMessage = result?.Message ?? "Registration failed";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ErrorMessage = result?.Message ?? "Registration failed.";
+                ErrorMessage = ex.Message;
             }
         }
     }
