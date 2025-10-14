@@ -40,3 +40,4 @@ namespace inetz.ifinance.app.viewmodels
             return true;
         }
     }
+}

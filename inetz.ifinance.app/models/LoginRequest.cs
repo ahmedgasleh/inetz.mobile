@@ -8,8 +8,8 @@ namespace inetz.ifinance.app.models
 {
     public class LoginRequest
     {
-        public string PhoneNumber { get; set; } = "";
-        public string Password { get; set; } = "";
-        public string DeviceId { get; set; } = "";
+        public string? PhoneNumber { get; set; }
+        public string? Password { get; set; }
+        public string? DeviceId { get; set; }
     }
 }

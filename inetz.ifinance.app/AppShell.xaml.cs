@@ -1,5 +1,6 @@
 ﻿using inetz.ifinance.app.services;
 using inetz.ifinance.app.views;
+using Microsoft.Maui.Hosting;
 
 namespace inetz.ifinance.app
 {
@@ -38,4 +39,22 @@ namespace inetz.ifinance.app
             }
         }
     }
+
+    //public partial class AppShell : Shell
+    //{
+    //    public AppShell ()
+    //    {
+    //        InitializeComponent();
+
+    //        Routing.RegisterRoute(nameof(views.SplashPage), typeof(views.SplashPage));
+    //        Routing.RegisterRoute(nameof(views.RegistrationStep1Page), typeof(views.RegistrationStep1Page));
+    //        Routing.RegisterRoute(nameof(views.RegistrationStep2Page), typeof(views.RegistrationStep2Page));
+    //        Routing.RegisterRoute(nameof(views.LoginPage), typeof(views.LoginPage));
+    //        Routing.RegisterRoute(nameof(views.HomePage), typeof(views.HomePage));
+
+    //        // Show Splash as initial page to let it decide navigation
+    //        _ = Shell.Current.GoToAsync(nameof(views.LoginPage));
+    //    }
+    //}
+
 }

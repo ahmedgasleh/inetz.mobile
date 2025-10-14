@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="inetz.ifinance.app">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!--<ShellContent
+        Title="Splash"
+        ContentTemplate="{DataTemplate local}"
+        Route="" />-->
 
 </Shell>
