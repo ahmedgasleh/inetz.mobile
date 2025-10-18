@@ -24,7 +24,7 @@ namespace inetz.ifinance.app.viewmodels
         }
 
         [RelayCommand]
-        private async Task CompleteAsync ()
+        public async Task CompleteAsync ()
         {
             try
             {

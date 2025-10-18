@@ -3,13 +3,17 @@
     x:Class="inetz.ifinance.app.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:inetz.ifinance.app.views"
     xmlns:local="clr-namespace:inetz.ifinance.app"
     Shell.FlyoutBehavior="Disabled"
     Title="inetz.ifinance.app">
 
-    <!--<ShellContent
-        Title="Splash"
-        ContentTemplate="{DataTemplate local}"
-        Route="" />-->
+    <!-- Register routes -->
+    <ShellContent Route="splash" ContentTemplate="{DataTemplate views:SplashPage}" />
+
+    <!-- We'll use two absolute routes for root replacement: //register and //login -->
+    <ShellContent Route="register1" ContentTemplate="{DataTemplate views:RegistrationStep1Page}" />
+    <ShellContent Route="register2" ContentTemplate="{DataTemplate views:RegistrationStep2Page}" />
+    <ShellContent Route="login" ContentTemplate="{DataTemplate views:LoginPage}" />
 
 </Shell>

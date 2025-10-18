@@ -15,6 +15,8 @@ namespace inetz.ifinance.app.viewmodels
         private readonly AuthService _auth_service;
         private readonly DeviceService _device_service;
 
+       
+
         public SplashViewModel ( AuthService authService, DeviceService deviceService )
         {
             _auth_service = authService;
@@ -22,7 +24,7 @@ namespace inetz.ifinance.app.viewmodels
         }
 
         [RelayCommand]
-        private async Task CheckStartupAsync ()
+        public async Task CheckStartupAsync ()
         {
             var deviceId = await _device_service.GetOrCreateDeviceIdAsync();
             System.Diagnostics.Debug.WriteLine($"DeviceId: {deviceId}");
@@ -44,8 +46,11 @@ namespace inetz.ifinance.app.viewmodels
 
             if (!isLocallyRegistered)
             {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(views.RegistrationStep1Page)}"));
+                //await MainThread.InvokeOnMainThreadAsync(() =>
+                //    Shell.Current.GoToAsync($"//{nameof(views.RegistrationStep1Page)}"));
+               
+                await Shell.Current.GoToAsync("//register1");
+                
                 return;
             }
 

@@ -14,7 +14,7 @@ namespace inetz.ifinance.app.viewmodels
         [ObservableProperty] private string errorMessage;
 
         [RelayCommand]
-        private async Task NextAsync ()
+        public async Task NextAsync ()
         {
             if (!ValidateInputs())
             {
@@ -29,7 +29,7 @@ namespace inetz.ifinance.app.viewmodels
             await Shell.Current.GoToAsync(nameof(RegistrationStep2Page));
         }
 
-        private bool ValidateInputs ()
+        public bool ValidateInputs ()
         {
             if (string.IsNullOrWhiteSpace(PhoneNumber) || !Regex.IsMatch(PhoneNumber, @"^\+[1-9]\d{6,14}$"))
                 return false;

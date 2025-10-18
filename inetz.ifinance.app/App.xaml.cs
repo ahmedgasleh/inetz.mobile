@@ -16,11 +16,11 @@ namespace inetz.ifinance.app
 
     public partial class App : Application
     {
-        private readonly AuthService _authService;
-        public App ( AuthService authService )
+        //private readonly AuthService _authService;
+        public App ()
         {
             InitializeComponent();
-            MainPage = new AppShell(authService);
+            MainPage = new AppShell();
         }
     }
 

@@ -1,152 +1,152 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Development\\Net.Maui8\\inetz.mobile\\",
+  "WorkspaceRootPath": "D:\\Development\\Mau .Net 8\\inetz.mobile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep1page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep1page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\splashpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\splashpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Development\\Net8.Maui\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep2page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep2page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\splashviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\splashviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\splashviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\models\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\splashpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\splashpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep2page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep2page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\registrationstep2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep1page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep1page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep2page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep2page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\models\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\models\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep1page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.ifinance.app\\views\\registrationstep1page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CE0A8830-C51F-4B5E-974D-E42C80D7C1BF}|inetz.ifinance.app\\inetz.ifinance.app.csproj|solutionrelative:inetz.ifinance.app\\views\\registrationstep1page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.authserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.authserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.auth.dbcontext\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.auth.dbcontext\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.authserver\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.authserver\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D2200B8F-6E65-4377-947E-B30211A457B2}|inetz.authserver\\inetz.authserver.csproj|solutionrelative:inetz.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|e:\\development\\net.maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|d:\\development\\mau .net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5440124E-610B-4C14-9862-28E95B99C824}|inetz.auth.dbcontext\\inetz.auth.dbcontext.csproj|solutionrelative:inetz.auth.dbcontext\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -157,27 +157,234 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\HomePage.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\HomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-04T18:01:22.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:11:04.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T20:57:41.17Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml",
+              "RelativeToolTip": "inetz.ifinance.app\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-04T18:11:01.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SplashViewModel.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs \u2B24",
+              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\SplashViewModel.cs \u2B24",
+              "ViewState": "AgIAACcAAAAAAAAAAAAywD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T16:17:11.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\MauiProgram.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\MauiProgram.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:06:54.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistrationStep1ViewModel.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:00:03.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SplashPage.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\SplashPage.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\SplashPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T17:04:05.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\AuthService.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\AuthService.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\AuthService.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\services\\AuthService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADgvykAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:58:08.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegistrationStep2Page.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T17:22:55.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SplashPage.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\SplashPage.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\SplashPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-13T21:41:07.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:00:58.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegistrationStep2ViewModel.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T17:00:33.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T18:08:50.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\App.xaml",
+              "RelativeToolTip": "inetz.ifinance.app\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-04T18:10:59.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "RegistrationStep1Page.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
               "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep1Page.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,469 +394,271 @@
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "RegistrationStep1ViewModel.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\RegistrationStep1ViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:00:03.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SplashViewModel.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvz0AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T16:17:11.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SplashPage.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\SplashPage.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml",
-              "RelativeToolTip": "inetz.ifinance.app\\views\\SplashPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-13T21:41:07.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SplashPage.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\SplashPage.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\SplashPage.xaml.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\views\\SplashPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:41:19.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\App.xaml",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\App.xaml",
-              "RelativeToolTip": "inetz.ifinance.app\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T18:10:59.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\App.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\App.xaml.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T20:57:41.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAjwAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T18:11:04.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\AuthService.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\AuthService.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\AuthService.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\services\\AuthService.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAASwA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:58:08.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "HomePage.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml.cs",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\HomePage.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml.cs",
               "RelativeToolTip": "inetz.ifinance.app\\views\\HomePage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T17:02:41.933Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-10-14T17:02:41.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\AppShell.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\AppShell.xaml",
-              "RelativeToolTip": "inetz.ifinance.app\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T18:11:01.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\views\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T18:08:50.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "App.g.i.cs",
               "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
               "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAawEsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T16:45:42.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\MauiProgram.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\MauiProgram.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:06:54.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "RegistrationStep2Page.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
               "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep2Page.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T17:53:14.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AuthResponse.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\AuthResponse.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\AuthResponse.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\AuthResponse.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\models\\AuthResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:55:17.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\LoginRequest.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\LoginRequest.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\models\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:54:35.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RegistrationStep2ViewModel.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\RegistrationStep2ViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:00:33.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\viewmodels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:00:58.162Z"
+              "WhenOpened": "2025-10-04T17:53:14.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "DeviceService.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\DeviceService.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\DeviceService.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\DeviceService.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\services\\DeviceService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAxwGAAAAASAAAAAAAAAA==",
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\AuthResponse.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\AuthResponse.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\models\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:22:20.499Z"
+              "WhenOpened": "2025-10-04T16:55:17.989Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserRegistration.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\UserRegistration.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\UserRegistration.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\models\\UserRegistration.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\models\\UserRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\LoginRequest.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\LoginRequest.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:53:42.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T19:16:21.077Z"
+              "WhenOpened": "2025-10-04T16:54:35.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\ApiService.cs",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\ApiService.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\services\\ApiService.cs",
-              "RelativeToolTip": "inetz.ifinance.app\\services\\ApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\DeviceService.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\DeviceService.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\DeviceService.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\services\\DeviceService.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAxwGAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:56:38.489Z"
+              "WhenOpened": "2025-10-13T21:22:20.499Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml",
-              "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\HomePage.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\HomePage.xaml",
-              "RelativeToolTip": "inetz.ifinance.app\\views\\HomePage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T18:01:22.046Z"
+              "DocumentIndex": 19,
+              "Title": "UserRegistration.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\UserRegistration.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\models\\UserRegistration.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\models\\UserRegistration.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\models\\UserRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:53:42.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T19:16:21.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\ApiService.cs",
+              "RelativeDocumentMoniker": "inetz.ifinance.app\\services\\ApiService.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\services\\ApiService.cs",
+              "RelativeToolTip": "inetz.ifinance.app\\services\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T16:56:38.489Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "LoginPage.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\LoginPage.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\LoginPage.xaml",
               "RelativeToolTip": "inetz.ifinance.app\\views\\LoginPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T17:53:33.935Z"
+              "WhenOpened": "2025-10-04T17:53:33.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\Properties\\launchSettings.json",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\Properties\\launchSettings.json",
               "RelativeToolTip": "inetz.ifinance.app\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-04T16:52:23.723Z"
+              "WhenOpened": "2025-10-04T16:52:23.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "RegistrationStep1Page.xaml",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
               "RelativeDocumentMoniker": "inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
               "RelativeToolTip": "inetz.ifinance.app\\views\\RegistrationStep1Page.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-04T17:52:51.518Z"
+              "WhenOpened": "2025-10-04T17:52:51.518Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\Controllers\\AuthController.cs",
               "RelativeToolTip": "inetz.authserver\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:32:49.216Z"
+              "WhenOpened": "2025-10-04T16:32:49.216Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\Program.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\Program.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\Program.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\Program.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\Program.cs",
               "RelativeToolTip": "inetz.authserver\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:29:16.757Z"
+              "WhenOpened": "2025-10-04T16:29:16.757Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "TokenService.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\services\\TokenService.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\services\\TokenService.cs",
               "RelativeToolTip": "inetz.auth.dbcontext\\services\\TokenService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAQwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:28:35.952Z"
+              "WhenOpened": "2025-10-04T16:28:35.952Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
               "Title": "PasswordHelper.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
               "RelativeDocumentMoniker": "inetz.authserver\\helpers\\PasswordHelper.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\helpers\\PasswordHelper.cs",
               "RelativeToolTip": "inetz.authserver\\helpers\\PasswordHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:26:33.232Z"
+              "WhenOpened": "2025-10-04T16:26:33.232Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
               "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\appsettings.json",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\appsettings.json",
               "RelativeDocumentMoniker": "inetz.authserver\\appsettings.json",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.authserver\\appsettings.json",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.authserver\\appsettings.json",
               "RelativeToolTip": "inetz.authserver\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-04T16:25:16.186Z"
+              "WhenOpened": "2025-10-04T16:25:16.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
               "Title": "UserProfile.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UserProfile.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UserProfile.cs",
               "RelativeToolTip": "inetz.auth.dbcontext\\models\\UserProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:00:30.409Z"
+              "WhenOpened": "2025-10-04T16:00:30.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
               "Title": "UpdateProfile.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\UpdateProfile.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\UpdateProfile.cs",
               "RelativeToolTip": "inetz.auth.dbcontext\\models\\UpdateProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T16:00:22.671Z"
+              "WhenOpened": "2025-10-04T16:00:22.671Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
               "Title": "RefreshToken.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\models\\RefreshToken.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\models\\RefreshToken.cs",
               "RelativeToolTip": "inetz.auth.dbcontext\\models\\RefreshToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:58:48.33Z"
+              "WhenOpened": "2025-10-04T15:58:48.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "AuthDbContext.cs",
-              "DocumentMoniker": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "DocumentMoniker": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
               "RelativeDocumentMoniker": "inetz.auth.dbcontext\\data\\AuthDbContext.cs",
-              "ToolTip": "E:\\Development\\Net.Maui8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
+              "ToolTip": "D:\\Development\\Mau .Net 8\\inetz.mobile\\inetz.auth.dbcontext\\data\\AuthDbContext.cs",
               "RelativeToolTip": "inetz.auth.dbcontext\\data\\AuthDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:58:28.409Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 468,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "18da7508-400e-4bce-a4db-e44bb68e666d",
-        "Display": 0,
-        "X": 760,
-        "Y": 222,
-        "Width": 920,
-        "Height": 979,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SplashViewModel.cs",
-              "DocumentMoniker": "D:\\Development\\Net8.Maui\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "ToolTip": "D:\\Development\\Net8.Maui\\inetz.mobile\\inetz.ifinance.app\\viewmodels\\SplashViewModel.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:34:44.535Z"
+              "WhenOpened": "2025-10-04T15:58:28.409Z",
+              "EditorCaption": ""
             }
           ]
         }
