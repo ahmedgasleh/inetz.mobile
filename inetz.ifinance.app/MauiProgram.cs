@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
-using CommunityToolkit.Maui;
-using inetz.ifinance.app.services;
-using inetz.ifinance.app.viewmodels;
-using inetz.ifinance.app.views;
+﻿using CommunityToolkit.Maui;
+using inetz.ifinance.app.Services;
+using inetz.ifinance.app.ViewModels;
+using inetz.ifinance.app.Views;
+using Microsoft.Extensions.Logging;
 
 namespace inetz.ifinance.app
 {
@@ -24,7 +23,6 @@ namespace inetz.ifinance.app
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
             // Register Services
             builder.Services.AddSingleton<ApiService>();
             builder.Services.AddSingleton<AuthService>();

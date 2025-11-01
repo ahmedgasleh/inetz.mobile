@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace inetz.ifinance.app.models
+namespace inetz.ifinance.app.Models
 {
     public class LoginRequest
     {

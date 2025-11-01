@@ -1,4 +1,4 @@
-namespace inetz.ifinance.app.views;
+namespace inetz.ifinance.app.Views;
 
 public partial class RegistrationStep2Page : ContentPage
 {

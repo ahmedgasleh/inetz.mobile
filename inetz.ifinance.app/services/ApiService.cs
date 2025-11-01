@@ -5,7 +5,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace inetz.ifinance.app.services
+namespace inetz.ifinance.app.Services
 {
     public class ApiService
     {

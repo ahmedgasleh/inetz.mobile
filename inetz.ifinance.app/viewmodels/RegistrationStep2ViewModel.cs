@@ -1,18 +1,16 @@
-﻿
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using inetz.ifinance.app.models;
-using inetz.ifinance.app.services;
-using inetz.ifinance.app.views;
+using inetz.ifinance.app.Models;
+using inetz.ifinance.app.Services;
+using inetz.ifinance.app.Views;
 
-
-namespace inetz.ifinance.app.viewmodels
+namespace inetz.ifinance.app.ViewModels
 {
     public partial class RegistrationStep2ViewModel : ObservableObject
     {
-        [ObservableProperty] private string name;
-        [ObservableProperty] private string address;
-        [ObservableProperty] private string errorMessage;
+        [ObservableProperty] private string? name;
+        [ObservableProperty] private string? address;
+        [ObservableProperty] private string? errorMessage;
 
         private readonly AuthService _auth_service;
         private readonly DeviceService _device_service;

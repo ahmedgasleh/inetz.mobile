@@ -1,21 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using inetz.ifinance.app.services;
-using Microsoft.Maui.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using inetz.ifinance.app.Models;
+using inetz.ifinance.app.Services;
 
-namespace inetz.ifinance.app.viewmodels
+namespace inetz.ifinance.app.ViewModels
 {
     public partial class SplashViewModel : ObservableObject
     {
         private readonly AuthService _auth_service;
         private readonly DeviceService _device_service;
 
-       
+
 
         public SplashViewModel ( AuthService authService, DeviceService deviceService )
         {
@@ -48,16 +43,16 @@ namespace inetz.ifinance.app.viewmodels
             {
                 //await MainThread.InvokeOnMainThreadAsync(() =>
                 //    Shell.Current.GoToAsync($"//{nameof(views.RegistrationStep1Page)}"));
-               
+
                 await Shell.Current.GoToAsync("//register1");
-                
+
                 return;
             }
 
             if (!isRegisteredOnServer)
             {
                 await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(views.RegistrationStep1Page)}"));
+                    Shell.Current.GoToAsync($"//{nameof(Views.RegistrationStep1Page)}"));
                 return;
             }
 
@@ -65,12 +60,12 @@ namespace inetz.ifinance.app.viewmodels
             if (loggedIn)
             {
                 await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(views.HomePage)}"));
+                    Shell.Current.GoToAsync($"//{nameof(Views.HomePage)}"));
             }
             else
             {
                 await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(views.LoginPage)}"));
+                    Shell.Current.GoToAsync($"//{nameof(Views.LoginPage)}"));
             }
         }
     }

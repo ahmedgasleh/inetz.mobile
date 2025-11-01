@@ -1,17 +1,18 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using inetz.ifinance.app.Models;
+using inetz.ifinance.app.Services;
+using inetz.ifinance.app.Views;
 using System.Text.RegularExpressions;
-using inetz.ifinance.app.models;
-using inetz.ifinance.app.views;
 
-namespace inetz.ifinance.app.viewmodels
+namespace inetz.ifinance.app.ViewModels
 {
     public partial class RegistrationStep1ViewModel : ObservableObject
     {
-        [ObservableProperty] private string phoneNumber;
-        [ObservableProperty] private string email;
-        [ObservableProperty] private string password;
-        [ObservableProperty] private string errorMessage;
+        [ObservableProperty] private string? phoneNumber;
+        [ObservableProperty] private string? email;
+        [ObservableProperty] private string? password;
+        [ObservableProperty] private string? errorMessage;
 
         [RelayCommand]
         public async Task NextAsync ()

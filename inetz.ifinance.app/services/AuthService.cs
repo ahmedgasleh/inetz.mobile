@@ -1,11 +1,11 @@
-﻿using inetz.ifinance.app.models;
+﻿using inetz.ifinance.app.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace inetz.ifinance.app.services
+namespace inetz.ifinance.app.Services
 {
     public class AuthService
     {

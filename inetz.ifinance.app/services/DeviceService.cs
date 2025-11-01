@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace inetz.ifinance.app.services
+namespace inetz.ifinance.app.Services
 {
     public class DeviceService
     {
