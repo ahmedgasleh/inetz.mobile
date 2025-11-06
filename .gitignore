@@ -6,6 +6,7 @@
 # dotenv files
 .env
 .vs
+.vs/
 
 # User-specific files
 *.rsuser
@@ -14,6 +15,7 @@
 *.userosscache
 *.sln.docstates
 */.vs
+*/.vs/
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
