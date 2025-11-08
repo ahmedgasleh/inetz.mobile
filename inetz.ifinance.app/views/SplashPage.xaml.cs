@@ -16,6 +16,6 @@ public partial class SplashPage : ContentPage
         base.OnAppearing();
 
         // Kick off the startup check after page appears (Shell is ready)
-        //await vm.CheckStartupAsync();
+        await vm.CheckStartupAsync();
     }
 }

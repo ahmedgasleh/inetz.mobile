@@ -10,132 +10,132 @@ namespace inetz.ifinance.app.Services
     public class DeviceService
     {
         private const string DeviceMetaKeyV1 = "app_device_meta_v1";
-        private const string DeviceMetaKeyV2 = "app_device_meta_v2";
+        //private const string DeviceMetaKeyV2 = "app_device_meta_v2";
 
         // Public API
         public async Task<string> GetOrCreateDeviceIdAsync ()
         {
             // Attempt to migrate if necessary
-            await TryMigrateV1ToV2Async();
+           // await TryMigrateV1ToV2Async();
 
             // Try V2 first
-            var v2 = await ReadMetaV2Async();
-            if (v2 != null && !string.IsNullOrEmpty(v2.Id))
-                return v2.Id;
+            var v1 = await ReadMetaV1Async();
+            if (v1 != null && !string.IsNullOrEmpty(v1.Id))
+                return v1.Id;
 
-            // Fallback: create and store V2 meta
-            var newMeta = CreateV2Meta();
-            await SaveMetaV2Async(newMeta);
+            // Fallback: create and store V1 meta
+            var newMeta = CreateV1Meta();
+            await SaveMetaV1Async(newMeta);
             return newMeta.Id;
         }
 
         // Migration: safe & idempotent
-        private async Task TryMigrateV1ToV2Async ()
-        {
-            try
-            {
-                // If V2 already exists, nothing to do
-                var existingV2 = await SecureStorage.GetAsync(DeviceMetaKeyV2);
-                if (!string.IsNullOrWhiteSpace(existingV2))
-                    return;
+        //private async Task TryMigrateV1ToV2Async ()
+        //{
+        //    try
+        //    {
+        //        // If V2 already exists, nothing to do
+        //        var existingV2 = await SecureStorage.GetAsync(DeviceMetaKeyV2);
+        //        if (!string.IsNullOrWhiteSpace(existingV2))
+        //            return;
 
-                // Read V1
-                var v1Json = await SecureStorage.GetAsync(DeviceMetaKeyV1);
-                if (string.IsNullOrWhiteSpace(v1Json))
-                    return; // no V1 stored → nothing to migrate
+        //        // Read V1
+        //        var v1Json = await SecureStorage.GetAsync(DeviceMetaKeyV1);
+        //        if (string.IsNullOrWhiteSpace(v1Json))
+        //            return; // no V1 stored → nothing to migrate
 
-                // Deserialize V1
-                DeviceMetaV1? metaV1 = null;
-                try
-                {
-                    metaV1 = JsonSerializer.Deserialize<DeviceMetaV1>(v1Json);
-                }
-                catch (Exception ex)
-                {
-                    //Debug.WriteLine($"DeviceService: failed to parse V1 meta: {ex.Message}");
-                }
+        //        // Deserialize V1
+        //        DeviceMetaV1? metaV1 = null;
+        //        try
+        //        {
+        //            metaV1 = JsonSerializer.Deserialize<DeviceMetaV1>(v1Json);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            //Debug.WriteLine($"DeviceService: failed to parse V1 meta: {ex.Message}");
+        //        }
 
-                if (metaV1 == null || string.IsNullOrEmpty(metaV1.Id))
-                {
-                    // try Preferences as fallback
-                    var pref = Preferences.Get(DeviceMetaKeyV1, null);
-                    if (!string.IsNullOrEmpty(pref))
-                    {
-                        try { metaV1 = JsonSerializer.Deserialize<DeviceMetaV1>(pref); }
-                        catch { /* can't parse → give up on migration */ }
-                    }
-                }
+        //        if (metaV1 == null || string.IsNullOrEmpty(metaV1.Id))
+        //        {
+        //            // try Preferences as fallback
+        //            var pref = Preferences.Get(DeviceMetaKeyV1, null);
+        //            if (!string.IsNullOrEmpty(pref))
+        //            {
+        //                try { metaV1 = JsonSerializer.Deserialize<DeviceMetaV1>(pref); }
+        //                catch { /* can't parse → give up on migration */ }
+        //            }
+        //        }
 
-                if (metaV1 == null || string.IsNullOrEmpty(metaV1.Id))
-                    return; // nothing valid to migrate
+        //        if (metaV1 == null || string.IsNullOrEmpty(metaV1.Id))
+        //            return; // nothing valid to migrate
 
-                // Build V2 from V1 values + extras
-                var metaV2 = new DeviceMetaV2
-                {
-                    Id = metaV1.Id,
-                    CreatedAtUtc = string.IsNullOrEmpty(metaV1.CreatedAtUtc) ? DateTime.UtcNow.ToString("o") : metaV1.CreatedAtUtc,
-                    AppVersion = AppInfo.VersionString ?? string.Empty,
-                    Platform = DeviceInfo.Platform.ToString(),
-                    Signature = string.Empty // compute HMAC here if you want
-                };
+        //        // Build V2 from V1 values + extras
+        //        var metaV2 = new DeviceMetaV2
+        //        {
+        //            Id = metaV1.Id,
+        //            CreatedAtUtc = string.IsNullOrEmpty(metaV1.CreatedAtUtc) ? DateTime.UtcNow.ToString("o") : metaV1.CreatedAtUtc,
+        //            AppVersion = AppInfo.VersionString ?? string.Empty,
+        //            Platform = DeviceInfo.Platform.ToString(),
+        //            Signature = string.Empty // compute HMAC here if you want
+        //        };
 
-                // Save V2
-                await SaveMetaV2Async(metaV2);
+        //        // Save V2
+        //        await SaveMetaV2Async(metaV2);
 
-                // Optionally remove V1 (or keep for diagnostics)
-                try
-                {
-                    SecureStorage.Remove(DeviceMetaKeyV1);
-                }
-                catch
-                {
-                    // ignore, not fatal
-                }
-            }
-            catch (Exception ex)
-            {
-                //Debug.WriteLine($"DeviceService: migration failed: {ex.Message}");
-                // Do not throw - migration failures should not block startup
-            }
-        }
+        //        // Optionally remove V1 (or keep for diagnostics)
+        //        try
+        //        {
+        //            SecureStorage.Remove(DeviceMetaKeyV1);
+        //        }
+        //        catch
+        //        {
+        //            // ignore, not fatal
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //Debug.WriteLine($"DeviceService: migration failed: {ex.Message}");
+        //        // Do not throw - migration failures should not block startup
+        //    }
+        //}
 
         // helpers for read/save V2
-        private async Task<DeviceMetaV2?> ReadMetaV2Async ()
+        private async Task<DeviceMetaV1?> ReadMetaV1Async ()
         {
             try
             {
-                var json = await SecureStorage.GetAsync(DeviceMetaKeyV2);
+                var json = await SecureStorage.GetAsync(DeviceMetaKeyV1); // using V1 key for V2 data
                 if (string.IsNullOrWhiteSpace(json)) return null;
-                return JsonSerializer.Deserialize<DeviceMetaV2>(json);
+                return JsonSerializer.Deserialize<DeviceMetaV1>(json);
             }
             catch
             {
                 // fallback to preferences
                 try
                 {
-                    var pref = Preferences.Get(DeviceMetaKeyV2, null);
+                    var pref = Preferences.Get(DeviceMetaKeyV1, null);
                     if (string.IsNullOrEmpty(pref)) return null;
-                    return JsonSerializer.Deserialize<DeviceMetaV2>(pref);
+                    return JsonSerializer.Deserialize<DeviceMetaV1>(pref);
                 }
                 catch { return null; }
             }
         }
 
-        private async Task SaveMetaV2Async ( DeviceMetaV2 meta )
+        private async Task SaveMetaV1Async ( DeviceMetaV1 meta )
         {
             var json = JsonSerializer.Serialize(meta);
             try
             {
-                await SecureStorage.SetAsync(DeviceMetaKeyV2, json);
+                await SecureStorage.SetAsync(DeviceMetaKeyV1, json);
             }
             catch
             {
-                Preferences.Set(DeviceMetaKeyV2, json);
+                Preferences.Set(DeviceMetaKeyV1, json);
             }
         }
 
-        private DeviceMetaV2 CreateV2Meta ()
-            => new DeviceMetaV2
+        private DeviceMetaV1 CreateV1Meta ()
+            => new DeviceMetaV1
             {
                 Id = CreateSecureId(),
                 CreatedAtUtc = DateTime.UtcNow.ToString("o"),
@@ -151,13 +151,13 @@ namespace inetz.ifinance.app.Services
         }
 
         // v1 and v2 classes (private)
-        private class DeviceMetaV1
-        {
-            public string Id { get; set; } = string.Empty;
-            public string CreatedAtUtc { get; set; } = string.Empty;
-        }
+        //private class DeviceMetaV1
+        //{
+        //    public string Id { get; set; } = string.Empty;
+        //    public string CreatedAtUtc { get; set; } = string.Empty;
+        //}
 
-        private class DeviceMetaV2
+        private class DeviceMetaV1
         {
             public string Id { get; set; } = string.Empty;
             public string CreatedAtUtc { get; set; } = string.Empty;

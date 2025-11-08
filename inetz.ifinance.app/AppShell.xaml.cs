@@ -13,7 +13,10 @@ namespace inetz.ifinance.app
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
             // Set initial route to splash so the Shell shows the loader first
-            GoToAsync("//splash");
+            //Uncomment for full flow
+            //GoToAsync("//splash");
+            //testing purposes
+            GoToAsync("//register1");
         }
     }
 }
