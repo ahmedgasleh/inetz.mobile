@@ -48,9 +48,13 @@ namespace inetz.auth.dbcontext.data
                     .HasMaxLength(50)
                     .IsRequired();
 
+
                 entity.Property(e => e.DeviceId)
                     .HasMaxLength(50)
                     .IsRequired();
+                entity.Property(e => e.DeviceHash)
+                  .HasMaxLength(256)
+                  .IsRequired();
 
                 entity.Property(e => e.UserPassWord)
                     .HasMaxLength(256)

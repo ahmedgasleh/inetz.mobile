@@ -7,27 +7,66 @@ using System.Threading.Tasks;
 
 namespace inetz.ifinance.app.Services
 {
+    public static class SecureStoreService
+    {
+        public static async Task<bool> SetAsync ( string key, string value )
+        {
+        
+            try
+            {
+                await SecureStorage.SetAsync(key, value);
+                return true;
+            }
+            catch
+            {
+                Preferences.Set(key, value);
+                return false;
+            }
+        }
+
+        public static async Task<string?> GetAsync ( string key )
+        {
+            try
+            {
+                return await SecureStorage.GetAsync(key);
+            }
+            catch
+            {
+                return Preferences.Get(key, null);
+            }
+        }
+    }
     public class DeviceService
     {
         private const string DeviceMetaKeyV1 = "app_device_meta_v1";
         //private const string DeviceMetaKeyV2 = "app_device_meta_v2";
 
         // Public API
-        public async Task<string> GetOrCreateDeviceIdAsync ()
+        public async Task<DeviceMetaV1> GetDeviceIdAsync ()
         {
             // Attempt to migrate if necessary
            // await TryMigrateV1ToV2Async();
 
             // Try V2 first
             var v1 = await ReadMetaV1Async();
-            if (v1 != null && !string.IsNullOrEmpty(v1.Id))
-                return v1.Id;
+            //if (v1 != null && !string.IsNullOrEmpty(v1.Id))
+            return v1 ?? new DeviceMetaV1(); 
+
+          
+        }
+
+        public async Task<string> CreateDeviceIdAsync ( string? devcieId )
+        {
+           
+            if ( devcieId == null ) return string.Empty;
 
             // Fallback: create and store V1 meta
-            var newMeta = CreateV1Meta();
+            var newMeta = CreateV1Meta(devcieId);
             await SaveMetaV1Async(newMeta);
             return newMeta.Id;
         }
+
+
 
         // Migration: safe & idempotent
         //private async Task TryMigrateV1ToV2Async ()
@@ -104,60 +143,39 @@ namespace inetz.ifinance.app.Services
         {
             try
             {
-                var json = await SecureStorage.GetAsync(DeviceMetaKeyV1); // using V1 key for V2 data
+                var json = await SecureStoreService.GetAsync(DeviceMetaKeyV1);
+              
                 if (string.IsNullOrWhiteSpace(json)) return null;
                 return JsonSerializer.Deserialize<DeviceMetaV1>(json);
             }
             catch
             {
-                // fallback to preferences
-                try
-                {
-                    var pref = Preferences.Get(DeviceMetaKeyV1, null);
-                    if (string.IsNullOrEmpty(pref)) return null;
-                    return JsonSerializer.Deserialize<DeviceMetaV1>(pref);
-                }
-                catch { return null; }
+               
+                 return null;
             }
         }
 
         private async Task SaveMetaV1Async ( DeviceMetaV1 meta )
         {
             var json = JsonSerializer.Serialize(meta);
-            try
-            {
-                await SecureStorage.SetAsync(DeviceMetaKeyV1, json);
-            }
-            catch
-            {
-                Preferences.Set(DeviceMetaKeyV1, json);
-            }
+
+            var result=   await SecureStoreService.SetAsync(DeviceMetaKeyV1, json);
+           
         }
 
-        private DeviceMetaV1 CreateV1Meta ()
+        private DeviceMetaV1 CreateV1Meta (string id)
             => new DeviceMetaV1
             {
-                Id = CreateSecureId(),
+                Id = id,
                 CreatedAtUtc = DateTime.UtcNow.ToString("o"),
                 AppVersion = AppInfo.VersionString ?? string.Empty,
                 Platform = DeviceInfo.Platform.ToString(),
                 Signature = string.Empty
             };
 
-        private static string CreateSecureId ()
-        {
-            var bytes = System.Security.Cryptography.RandomNumberGenerator.GetBytes(16);
-            return BitConverter.ToString(bytes).Replace("-", "").ToLowerInvariant();
-        }
+        
 
-        // v1 and v2 classes (private)
-        //private class DeviceMetaV1
-        //{
-        //    public string Id { get; set; } = string.Empty;
-        //    public string CreatedAtUtc { get; set; } = string.Empty;
-        //}
-
-        private class DeviceMetaV1
+        public class DeviceMetaV1
         {
             public string Id { get; set; } = string.Empty;
             public string CreatedAtUtc { get; set; } = string.Empty;

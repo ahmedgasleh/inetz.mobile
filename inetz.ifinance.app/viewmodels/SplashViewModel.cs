@@ -1,72 +1,28 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using inetz.ifinance.app.Models;
-using inetz.ifinance.app.Services;
+using inetz.ifinance.app.Services.Interfaces;
+using inetz.ifinance.app.ViewModel.Base;
 
-namespace inetz.ifinance.app.ViewModels
+
+namespace inetz.ifinance.app.ViewModel
 {
-    public partial class SplashViewModel : ObservableObject
+    public partial class SplashViewModel : ViewModelBase
     {
-        private readonly AuthService _auth_service;
-        private readonly DeviceService _device_service;
-
-
-
-        public SplashViewModel ( AuthService authService, DeviceService deviceService )
+        private readonly INavigationService _navigationService;
+        public SplashViewModel ( INavigationService navigationService )
         {
-            _auth_service = authService;
-            _device_service = deviceService;
+            _navigationService = navigationService;
         }
+
+        
 
         [RelayCommand]
         public async Task CheckStartupAsync ()
         {
-            var deviceId = await _device_service.GetOrCreateDeviceIdAsync();
-            System.Diagnostics.Debug.WriteLine($"DeviceId: {deviceId}");
+            await _navigationService.GoToRegister("//register1");
 
-            var isLocallyRegistered = await _auth_service.IsUserRegisteredAsync();
-            bool isRegisteredOnServer = false;
-
-            if (isLocallyRegistered)
-            {
-                try
-                {
-                    isRegisteredOnServer = await _auth_service.IsUserRegisteredAsync();
-                }
-                catch
-                {
-                    isRegisteredOnServer = true; // fallback to local claim when offline
-                }
-            }
-
-            if (!isLocallyRegistered)
-            {
-                //await MainThread.InvokeOnMainThreadAsync(() =>
-                //    Shell.Current.GoToAsync($"//{nameof(views.RegistrationStep1Page)}"));
-
-                await Shell.Current.GoToAsync("//register1");
-
-                return;
-            }
-
-            if (!isRegisteredOnServer)
-            {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(Views.RegistrationStep1Page)}"));
-                return;
-            }
-
-            var loggedIn = await _auth_service.IsUserLoggedInAsync();
-            if (loggedIn)
-            {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(Views.HomePage)}"));
-            }
-            else
-            {
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                    Shell.Current.GoToAsync($"//{nameof(Views.LoginPage)}"));
-            }
+            return;
         }
+
     }
 }

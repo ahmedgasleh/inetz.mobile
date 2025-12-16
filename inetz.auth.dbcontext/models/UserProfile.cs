@@ -5,6 +5,7 @@
         public Guid Id { get; set; }
         public string UserId { get; set; } = string.Empty;
         public string DeviceId { get; set; } = string.Empty;
+        public string DeviceHash { get; set; } = string.Empty;
 
         public string UserEmail { get; set; } = string.Empty;
         public string UserPassWord { get; set; } = string.Empty;

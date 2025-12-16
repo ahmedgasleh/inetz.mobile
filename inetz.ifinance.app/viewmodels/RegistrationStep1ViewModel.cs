@@ -1,108 +1,121 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+
+using inetz.auth.app.models;
 using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
-using inetz.ifinance.app.Views;
+using inetz.ifinance.app.Services.Interfaces;
+using inetz.ifinance.app.ViewModel.Base;
+
+using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace inetz.ifinance.app.ViewModels
+namespace inetz.ifinance.app.ViewModel
 {
-    public partial class RegistrationStep1ViewModel : ObservableObject
+    public partial class RegistrationStep1ViewModel : ViewModelBase, IQueryAttributable
     {
-        private readonly ApiService _api; // inject your API service (optional)
-        public RegistrationStep1ViewModel ( ApiService api )
+        private readonly ApiService _api;
+        private readonly DeviceService _deviceService;
+        private readonly INavigationService _navigationService;
+        public RegistrationStep1ViewModel ( ApiService api, INavigationService navigationService, DeviceService deviceService )
         {
             _api = api;
+            _navigationService = navigationService;
+            _deviceService = deviceService;
         }
-        [ObservableProperty] private string? phoneNumber;
-        [ObservableProperty] private string? email;
-        [ObservableProperty] private string? password;
-        [ObservableProperty] private string? errorMessage;
-        [ObservableProperty] private bool isBusy;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(NextCommand))]
+        private string phoneNumber = string.Empty;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(NextCommand))]
+        private string email = string.Empty;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(NextCommand))]
+        private string password = string.Empty;
+       
+        [ObservableProperty] 
+        private string? errorMessage;
 
 
-        // When inputs change, re-evaluate CanExecute (generated NextCommand)
-        partial void OnPhoneNumberChanged ( string? value ) => NextCommand.NotifyCanExecuteChanged();
-        partial void OnEmailChanged ( string? value ) => NextCommand.NotifyCanExecuteChanged();
-        partial void OnPasswordChanged ( string? value ) => NextCommand.NotifyCanExecuteChanged();
-        partial void OnIsBusyChanged ( bool value ) => NextCommand.NotifyCanExecuteChanged();
 
-        // NextCommand (generated) will call CanNext to decide whether the button is enabled
         [RelayCommand(CanExecute = nameof(CanNext))]
-        public async Task NextAsync ()
+        private async void Next ()
         {
-            // prevent re-entry -- IsBusy already used in CanNext but double-protect
-            if (IsBusy) return;
-
-            ErrorMessage = null; // clear previous error
-            IsBusy = true;
+           
+                Console.WriteLine("Form is busy ... !");          
+           
 
             try
             {
-                // local validation (should be true when CanNext allowed the command, but extra check)
-                if (!ValidateInputs())
+                // Example: call your API to prevalidate or register
+                // This assumes IApiService.RegisterStep1Async returns an ApiResult with Success + ErrorMessage
+                var result = await _api.PostAsync<object>("api/auth/register1", new UserProfile
                 {
-                    ErrorMessage = "Fix input errors.";
+                    UserId = PhoneNumber!,
+                    UserEmail = Email!,
+                    UserPassWord = Password!
+                });
+
+                if (!result.IsSuccess)
+                {
+                    // show server-side validation error (e.g., email already exists)
+                    ErrorMessage = result.Error ?? "Server rejected the request.";
                     return;
                 }
 
-                Preferences.Set("TempPhone", PhoneNumber);
-                Preferences.Set("TempEmail", Email);
-                Preferences.Set("TempPassword", Password);
+                var data = JsonSerializer.Deserialize<dynamic>(result?.Data.ToString());
 
-                // var dd  = _api.PostAsync<object>("register", new { phoneNumber = PhoneNumber, email = Email });
+                var id = data?.GetProperty("deviceId").ToString();
 
-                // Example: call your API to prevalidate or register
-                // This assumes IApiService.RegisterStep1Async returns an ApiResult with Success + ErrorMessage
-                var  result = await _api.PostAsync<object>("register", new UserRegistration
+                //var data1 = JsonSerializer.Deserialize<UserProfile>(data.ToString());
+
+                //var deid = await _deviceService.GetDeviceIdAsync();
+
+                if (!string.IsNullOrWhiteSpace(id))
                 {
-                    PhoneNumber = PhoneNumber!,
-                    Email = Email!,
-                    Password = Password!
-                });
+                    _deviceService.CreateDeviceIdAsync(id!);
+                }
+                else return;
 
-                /*if (!result.Success)
-                {
-                    // show server-side validation error (e.g., email already exists)
-                    ErrorMessage = result.ErrorMessage ?? "Server rejected the request.";
-                    return;
-                }*/
+                await _navigationService.GoToRegisterUpdate(PhoneNumber);
 
-                await Shell.Current.GoToAsync(nameof(RegistrationStep2Page));
-            }
-            catch (OperationCanceledException)
-            {
-                // user cancelled - optional
             }
             catch (Exception ex)
             {
 
-                // network or unexpected error
-                ErrorMessage = "Network error — please try again.";
-                System.Diagnostics.Debug.WriteLine(ex);
+                throw;
             }
             finally
             {
-                IsBusy = false;
+               
             }
-             
+
+
+
+
+
         }
 
         private bool CanNext ()
         {
-            // button enabled when not busy and local validation passes
-            return !IsBusy && ValidateInputs();
-        }
+            // Do simple checks only; avoid expensive regex on every keystroke.
+            if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@")) return false;
+            if (string.IsNullOrWhiteSpace(Password) || Password.Length < 6) return false;
+            // Phone optional here — or do a very cheap check
+            if (string.IsNullOrWhiteSpace(PhoneNumber)) return false;
 
-        public bool ValidateInputs ()
-        {
-            if (string.IsNullOrWhiteSpace(PhoneNumber) || !Regex.IsMatch(PhoneNumber, @"^\+[1-9]\d{6,14}$"))
-                return false;
-            if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@"))
-                return false;
-            if (string.IsNullOrWhiteSpace(Password) || Password.Length < 6)
-                return false;
             return true;
+        }
+        public void ApplyQueryAttributes ( IDictionary<string, object> query )
+        {
+            if (query.Count > 0)
+            {
+                //eventDetail = query ["Event"] as EventModel;
+            }
         }
     }
 }

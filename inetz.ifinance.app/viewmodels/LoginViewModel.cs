@@ -31,11 +31,12 @@ namespace inetz.ifinance.app.ViewModels
         {
             try
             {
+                var result = _device_service.GetDeviceIdAsync().Result;
                 var req = new LoginRequest
                 {
                     PhoneNumber = PhoneNumber,
                     Password = Password,
-                    DeviceId = await _device_service.GetOrCreateDeviceIdAsync()
+                    DeviceId = result.Id,
                 };
 
                 var res = await _auth_service.LoginAsync(req);

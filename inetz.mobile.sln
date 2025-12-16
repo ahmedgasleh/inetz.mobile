@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inetz.authserver", "inetz.a
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inetz.ifinance.app", "inetz.ifinance.app\inetz.ifinance.app.csproj", "{876174AC-0DF7-47BE-BD9E-D6CF181FCCEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inetz.ifinance.trial", "inetz.ifinance.trial\inetz.ifinance.trial.csproj", "{078889CA-45BE-4489-8144-0A1763621F86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,12 @@ Global
 		{876174AC-0DF7-47BE-BD9E-D6CF181FCCEA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{876174AC-0DF7-47BE-BD9E-D6CF181FCCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876174AC-0DF7-47BE-BD9E-D6CF181FCCEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078889CA-45BE-4489-8144-0A1763621F86}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

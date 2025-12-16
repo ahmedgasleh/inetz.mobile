@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<views:ContentPageBase xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="inetz.ifinance.app.Views.RegistrationStep2Page"
-             Title="RegistrationStep2Page">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+             x:Class="inetz.ifinance.app.Views.RegistrationStep2Page"   
+             xmlns:views="clr-namespace:inetz.ifinance.app.Views.Base"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions=".3*,.3*,.1*,.3*" RowSpacing="10" Padding="10">
+        <Border Grid.Row="0" StrokeThickness="0">
+            <Grid RowDefinitions=".3*,.3*,.3*" RowSpacing="2" Padding="6">
+                <Grid Grid.Row="0" ColumnDefinitions=".1*, .8*" >
+                    <Image Grid.Column="0" Source="image_placeholder.png" Aspect="AspectFill" HeightRequest="45" WidthRequest="45"/>
+                    <Entry Grid.Column="1"
+                    Text="{Binding LastName}"
+                    Placeholder="Enter Your Last Name"
+                    FontSize="16"
+                    HeightRequest="55" />        
+                </Grid>
+
+                <Grid Grid.Row="1" ColumnDefinitions=".1*, .8*" >
+                    <Image Grid.Column="0" Source="image_placeholder.png" Aspect="AspectFill" HeightRequest="45" WidthRequest="45" />
+                    <Entry Grid.Column="1"
+                    Text="{Binding FirtName}"
+                    Placeholder="Enter Your First Name"
+                    FontSize="16"
+                    HeightRequest="55" />        
+                </Grid>
+
+                <Grid Grid.Row="2" ColumnDefinitions=".1*, .8*" >
+                    <Image Grid.Column="0" Source="image_placeholder.png" Aspect="AspectFill" HeightRequest="45" WidthRequest="45" />
+                    <Entry Grid.Column="1"
+                     Text="{Binding Address}"
+                     Placeholder="Enter Your Address"
+                     FontSize="16"
+                     HeightRequest="55" />      
+                </Grid>
+
+            </Grid>
+            
+            
+            
+        </Border>
+        <Border Grid.Row="3" StrokeThickness="0">
+            <Grid RowDefinitions="Auto,Auto,Auto" Padding="6">
+                <Button
+                Text="Update Account"
+                FontSize="24"
+                Command="{Binding CompleteCommand}"
+               
+                HorizontalOptions="Fill" />
+
+                <!-- server / validation error message -->
+                <Label
+                  Text="{Binding ErrorMessage}"
+                  Grid.Row="3"
+                  IsVisible="{Binding ErrorMessage, Converter={StaticResource NullOrEmptyToFalseConverter}}"
+                  Style="{StaticResource ErrorTextStyle}"
+                  Margin="0,20,0,0" />      
+
+            </Grid>
+            
+        </Border>
+        
+    </Grid>
+
+</views:ContentPageBase>

@@ -19,22 +19,22 @@ namespace inetz.ifinance.app.Services
         public async Task<AuthResponse?> RegisterAsync ( UserRegistration model )
         {
             var result = await _apiService.PostAsync<AuthResponse>("register", model);
-            if (result?.Success == true)
+            if (result?.IsSuccess == true)
             {
-                await SecureStorage.SetAsync("PhoneNumber", model.PhoneNumber);
-                await SecureStorage.SetAsync("BinNumber", result.Bin);
+                await SecureStorage.SetAsync("PhoneNumber", model.PhoneNumber ?? string.Empty);
+                await SecureStorage.SetAsync("BinNumber", result?.Data?.Bin ?? string.Empty);
             }
-            return result;
+            return result?.Data;
         }
 
         public async Task<AuthResponse?> LoginAsync ( LoginRequest request )
         {
             var result = await _apiService.PostAsync<AuthResponse>("login", request);
-            if (result?.Success == true)
+            if (result?.IsSuccess == true)
             {
-                await SecureStorage.SetAsync("AuthToken", result.Token);
+                await SecureStorage.SetAsync("AuthToken", result?.Data?.Token ?? string.Empty);
             }
-            return result;
+            return result?.Data;
         }
 
         public async Task<bool> IsUserRegisteredAsync ()
@@ -51,7 +51,7 @@ namespace inetz.ifinance.app.Services
 
         public async Task LogoutAsync ()
         {
-            SecureStorage.Remove("AuthToken");
+           await Task.Run(() =>  SecureStorage.Remove("AuthToken"));
             // optionally clear BinNumber or user info
         }
     }

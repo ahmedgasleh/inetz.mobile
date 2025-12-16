@@ -23,13 +23,33 @@ namespace inetz.authserver.Controllers
             _db = db;
         }
 
-        [HttpPost("register")]
+        [HttpGet("exist")]
+        public async Task<IActionResult> UserExist ( [FromQuery] string userId )
+        {
+            var user = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.UserId == userId));
+            if (user != null)
+                return Ok(new { exists = true });
+            else
+                return Ok(new { exists = false });
+        }
+
+        [HttpPost("register1")]
         public async Task<IActionResult> Register ( [FromBody] UserProfile userProfile )
         {
+            if (string.IsNullOrWhiteSpace( userProfile.UserId) || string.IsNullOrWhiteSpace(userProfile.UserEmail) || string.IsNullOrWhiteSpace(userProfile.UserPassWord))
+                return BadRequest("Your user ID, Email or Password cannot be null");
+
             if (userProfile != null)
             {
+                var existRecord = await Task.Run(() => _db.UserProfiles.Any(u => u.UserId == userProfile.UserId));
+
+                if(existRecord) return BadRequest("Your user ID (Phone Number) Already exist");
+
+
                 // Hash password before saving
                 userProfile.UserPassWord = PasswordHelper.HashPassword(userProfile, userProfile.UserPassWord);
+                userProfile.DeviceId = Guid.NewGuid().ToString();
+                userProfile.DeviceHash = PasswordHelper.HashDevice(userProfile, userProfile.DeviceId);
 
                 _db.UserProfiles.Add(userProfile);
                 _db.SaveChanges();
@@ -38,9 +58,11 @@ namespace inetz.authserver.Controllers
                 Guid newId = userProfile.Id;
 
                 // Now you can retrieve it again if needed:
-                var createdRecord = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.Id == newId));
+                UserProfile createdRecord = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.Id == newId)) ?? new UserProfile();
 
-                return Ok(createdRecord);
+                //return Ok(createdRecord);
+
+                return new JsonResult(createdRecord);
 
             }
             else return BadRequest();
@@ -48,7 +70,9 @@ namespace inetz.authserver.Controllers
 
         }
 
-        [HttpPost("updateProfile")]
+       
+
+        [HttpPost("register2")]
         public async Task<IActionResult> Register ( [FromBody] UpdateProfile updateProfile )
         {
             if (updateProfile != null)
@@ -78,6 +102,9 @@ namespace inetz.authserver.Controllers
 
             if (!PasswordHelper.VerifyPassword(user, user.UserPassWord, dto.Password))
                 return Unauthorized("Invalid password");
+
+            if (!PasswordHelper.VerifyDevice(user, user.DeviceHash, dto.DeviceId))
+                return Unauthorized("Invalid device");
 
 
             //if (dto.Username != "test" || dto.Password != "pass")

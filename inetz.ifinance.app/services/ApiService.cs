@@ -13,15 +13,23 @@ namespace inetz.ifinance.app.Services
 
         public ApiService ()
         {
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://10.0.2.2:7206/") };
+            _httpClient = new HttpClient { BaseAddress = new Uri("https://1bd3w9m1-7206.use.devtunnels.ms/") };
         }
 
-        public async Task<T?> PostAsync<T> ( string endpoint, object payload )
+        public async Task<ApiResult<T>> PostAsync<T> ( string endpoint, object payload )
         {
             var response = await _httpClient.PostAsJsonAsync(endpoint, payload);
+            var status = response.StatusCode;
+
             if (response.IsSuccessStatusCode)
-                return await response.Content.ReadFromJsonAsync<T>();
-            return default;
+            {
+                var data = await response.Content.ReadFromJsonAsync<T>();
+                return ApiResult<T>.Success(data!, status);
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            if (string.IsNullOrWhiteSpace(error))  error = response.StatusCode.ToString();
+            return ApiResult<T>.Failure(status, error);
         }
     }
 }

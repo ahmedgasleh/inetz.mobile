@@ -1,63 +1,78 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using inetz.auth.app.models;
 using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
+using inetz.ifinance.app.Services.Interfaces;
 using inetz.ifinance.app.Views;
 
+
+
 namespace inetz.ifinance.app.ViewModels
-{
+{ 
+    [QueryProperty(nameof(UserId), "UserId")]
     public partial class RegistrationStep2ViewModel : ObservableObject
     {
-        [ObservableProperty] private string? name;
-        [ObservableProperty] private string? address;
-        [ObservableProperty] private string? errorMessage;
+        private readonly ApiService _api;       
+        private readonly INavigationService _navigationService;
 
-        private readonly AuthService _auth_service;
-        private readonly DeviceService _device_service;
-
-        public RegistrationStep2ViewModel ( AuthService authService, DeviceService deviceService )
+       
+        public RegistrationStep2ViewModel ( ApiService api, INavigationService navigationService )
         {
-            _auth_service = authService ?? throw new ArgumentNullException(nameof(authService));
-            _device_service = deviceService ?? throw new ArgumentNullException(nameof(deviceService));
+           _api = api;
+              _navigationService = navigationService;   
         }
 
-        [RelayCommand]
+        [ObservableProperty]
+        private string? userId;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(CompleteCommand))]
+        private string lastName = string.Empty;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(CompleteCommand))]
+        private string firstName = string.Empty;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(CompleteCommand))]
+        private string address = string.Empty;
+
+        [ObservableProperty]
+        private string? errorMessage;
+
+
+
+        [RelayCommand] //(CanExecute = nameof(CanNext))] when implement validation
         public async Task CompleteAsync ()
         {
             try
             {
-                var model = new UserRegistration
+                var result = await _api.PostAsync<object>("api/auth/register2", new UpdateProfile
                 {
-                    PhoneNumber = Preferences.Get("TempPhone", ""),
-                    Email = Preferences.Get("TempEmail", ""),
-                    Password = Preferences.Get("TempPassword", ""),
-                    Name = Name ?? string.Empty,
-                    Address = Address ?? string.Empty,
-                    DeviceId = await _device_service.GetOrCreateDeviceIdAsync()
-                };
+                    LastName = LastName!,
+                    FirstName = FirstName,
+                    Address = Address!,
+                    UserId = UserId!
 
-                var result = await _auth_service.RegisterAsync(model);
-
-                if (result?.Success == true)
-                {
-                    // Clear temp prefs
-                    Preferences.Remove("TempPhone");
-                    Preferences.Remove("TempEmail");
-                    Preferences.Remove("TempPassword");
-
-                    // Navigate to LoginPage
-                    await MainThread.InvokeOnMainThreadAsync(() =>
-                        Shell.Current.GoToAsync($"//{nameof(LoginPage)}"));
-                }
-                else
-                {
-                    ErrorMessage = result?.Message ?? "Registration failed";
-                }
+                });
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
             }
+        }
+
+        //TDO make sure update contaims must have fields
+        private bool CanNext ()
+        {
+            //// Do simple checks only; avoid expensive regex on every keystroke.
+            //if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@")) return false;
+            //if (string.IsNullOrWhiteSpace(Password) || Password.Length < 6) return false;
+            //// Phone optional here — or do a very cheap check
+            //if (string.IsNullOrWhiteSpace(PhoneNumber)) return false;
+
+            return true;
         }
     }
 }

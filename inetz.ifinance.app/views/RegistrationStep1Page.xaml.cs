@@ -1,10 +1,11 @@
-using inetz.ifinance.app.ViewModels;
+using inetz.ifinance.app.ViewModel;
+using inetz.ifinance.app.Views.Base;
 
 namespace inetz.ifinance.app.Views;
 
-public partial class RegistrationStep1Page : ContentPage
+public partial class RegistrationStep1Page : ContentPageBase
 {
-	public RegistrationStep1Page( RegistrationStep1ViewModel vm )
+	public RegistrationStep1Page( RegistrationStep1ViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
