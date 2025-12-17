@@ -39,6 +39,7 @@ namespace inetz.ifinance.app
             builder.Services.AddSingleton<SplashViewModel>();
             builder.Services.AddSingleton<RegistrationStep1ViewModel>();
             builder.Services.AddSingleton<RegistrationStep2ViewModel>();
+            builder.Services.AddSingleton<LoginViewModel>();
 
 
             return builder;

@@ -20,7 +20,7 @@
                 <Grid Grid.Row="1" ColumnDefinitions=".1*, .8*" >
                     <Image Grid.Column="0" Source="image_placeholder.png" Aspect="AspectFill" HeightRequest="45" WidthRequest="45" />
                     <Entry Grid.Column="1"
-                    Text="{Binding FirtName}"
+                    Text="{Binding FirstName}"
                     Placeholder="Enter Your First Name"
                     FontSize="16"
                     HeightRequest="55" />        

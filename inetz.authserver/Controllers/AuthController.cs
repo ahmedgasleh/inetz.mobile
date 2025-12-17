@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System;
 using inetz.auth.dbcontext.data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Nodes;
 
 namespace inetz.authserver.Controllers
 {
@@ -86,7 +87,7 @@ namespace inetz.authserver.Controllers
                     _db.SaveChanges();
                 }
 
-                return Ok();
+                return new JsonResult(new JsonObject{["UserId"] = updateProfile.UserId });
             }
             else return BadRequest();
         }

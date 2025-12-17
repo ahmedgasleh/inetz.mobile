@@ -28,6 +28,13 @@ namespace inetz.ifinance.app.Services
         public Task GoToRegisterUpdate ( string? userId)
           =>  Navigate("//register2", new Dictionary<string, object> { ["UserId"] = userId ?? string.Empty });
 
+        public Task GoToLogin ( string? returnUrl )
+        => Navigate("//login", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
+
+        public Task GoToHome ( string? returnUrl )
+       => Navigate("//Home", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
+
+
 
 
         //public Task GoToSelectedOrderDetail ( long selectedOrderId )

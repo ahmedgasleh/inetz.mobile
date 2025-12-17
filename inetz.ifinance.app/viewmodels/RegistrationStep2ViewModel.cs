@@ -5,6 +5,7 @@ using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
 using inetz.ifinance.app.Views;
+using System.Text.Json;
 
 
 
@@ -51,11 +52,23 @@ namespace inetz.ifinance.app.ViewModels
                 var result = await _api.PostAsync<object>("api/auth/register2", new UpdateProfile
                 {
                     LastName = LastName!,
-                    FirstName = FirstName,
+                    FirstName = FirstName!,
                     Address = Address!,
                     UserId = UserId!
 
                 });
+
+                if (!result.IsSuccess)
+                {
+                    // show server-side validation error (e.g., email already exists)
+                    ErrorMessage = result.Error ?? "Server rejected the request.";
+                    return;
+                }
+
+                var data = JsonSerializer.Deserialize<dynamic>(result?.Data.ToString());
+
+                await _navigationService.GoToLogin("login");
+
             }
             catch (Exception ex)
             {

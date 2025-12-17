@@ -2,57 +2,102 @@
 using CommunityToolkit.Mvvm.Input;
 using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
+using inetz.ifinance.app.Services.Interfaces;
+using inetz.ifinance.app.ViewModel.Base;
 using inetz.ifinance.app.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace inetz.ifinance.app.ViewModels
 {
-    public partial class LoginViewModel : ObservableObject
-    {
-        [ObservableProperty] private string? phoneNumber;
-        [ObservableProperty] private string? password;
-        [ObservableProperty] private string? errorMessage;
+    public partial class LoginViewModel : ViewModelBase, IQueryAttributable
+    {    
 
-        private readonly AuthService _auth_service;
+        private readonly ApiService _api;
         private readonly DeviceService _device_service;
-
-        public LoginViewModel ( AuthService authService, DeviceService deviceService )
+        private readonly INavigationService _navigationService;
+        public LoginViewModel ( ApiService api, DeviceService deviceService, INavigationService navigationService )
         {
-            _auth_service = authService ?? throw new ArgumentNullException(nameof(authService));
+            _api = api;
             _device_service = deviceService ?? throw new ArgumentNullException(nameof(deviceService));
+            _navigationService = navigationService;
+
         }
 
-        [RelayCommand]
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
+        private string userId = string.Empty;
+
+        [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
+        private string password = string.Empty;
+
+        [ObservableProperty]
+        private string? errorMessage;
+
+        [RelayCommand(CanExecute = nameof(CanNext))]
         private async Task LoginAsync ()
         {
             try
             {
-                var result = _device_service.GetDeviceIdAsync().Result;
-                var req = new LoginRequest
+                var result = await _device_service.GetDeviceIdAsync();
+               
+                var res = await _api.PostAsync<object>("api/auth/login", new LoginRequest
                 {
-                    PhoneNumber = PhoneNumber,
+                    UserId = UserId,
                     Password = Password,
                     DeviceId = result.Id,
-                };
+                });
 
-                var res = await _auth_service.LoginAsync(req);
-                if (res?.Success == true)
+                if (res?.IsSuccess == true)
                 {
+                    var data = JsonSerializer.Deserialize<dynamic>(res?.Data.ToString());
+
+                    TimeSpan duration = DateTime.Now - DateTime.Parse(data?.GetProperty("accessTokenExpiresUtc").ToString());
+
+                    var tokenResponse = new TokenResponse
+                    {
+                        AccessToken = data?.GetProperty("accessToken").ToString() ?? string.Empty,
+                        RefreshToken = data?.GetProperty("refreshToken").ToString() ?? string.Empty,
+                        ExpiresIn = duration.Seconds,
+                    };
+
+                    await _device_service.SaveAsync(tokenResponse);
+
                     await MainThread.InvokeOnMainThreadAsync(() =>
-                        Shell.Current.GoToAsync(nameof(HomePage)));
+                        _navigationService.GoToLogin("home"));
                 }
                 else
                 {
-                    ErrorMessage = res?.Message ?? "Login failed";
+                    ErrorMessage = res?.Error ?? "Login failed";
                 }
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
+            }
+        }
+
+        private bool CanNext ()
+        {
+            // Do simple checks only; avoid expensive regex on every keystroke.
+            if (string.IsNullOrWhiteSpace(UserId)) return false;
+            if (string.IsNullOrWhiteSpace(Password)) return false;
+          
+
+            return true;
+        }
+
+        public void ApplyQueryAttributes ( IDictionary<string, object> query )
+        {
+            if (query.Count > 0)
+            {
+                //eventDetail = query ["Event"] as EventModel;
             }
         }
     }

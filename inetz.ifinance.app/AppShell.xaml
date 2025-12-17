@@ -15,6 +15,7 @@
     <ShellContent Route="register1" ContentTemplate="{DataTemplate views:RegistrationStep1Page}" />
     <ShellContent Route="register2" ContentTemplate="{DataTemplate views:RegistrationStep2Page}" />
     <ShellContent Route="login" ContentTemplate="{DataTemplate views:LoginPage}" />
+    <ShellContent Route="home" ContentTemplate="{DataTemplate views:HomePage}" />
 
 
 </Shell>
