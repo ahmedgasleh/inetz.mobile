@@ -15,8 +15,15 @@ namespace inetz.ifinance.dbcontext.Models
         public string? Address { get; set; } = string.Empty;
         public string? DeviceId { get; set; } = string.Empty;
     }
+public class VerifyBinRequest
+    {
+        public Guid UserId { get; set; }
+        public string Bin { get; set; } = string.Empty;
+    }
+
     
-   
+
+
 
 
 }

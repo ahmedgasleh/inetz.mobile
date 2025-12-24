@@ -24,9 +24,9 @@ namespace inetz.ifinance.app.ViewModels
         {
             var result = await _device_service.GetDeviceIdAsync();
             if(string.IsNullOrWhiteSpace(result.Id))
-                await _navigationService.GoToBin("//bin");  //await _navigationService.GoToRegister("//register1");
+                await _navigationService.GoToRegister("//register1");
             else
-                await _navigationService.GoToBin("//bin");  //await _navigationService.GoToLogin("//login");
+                await _navigationService.GoToLogin("//login");
 
             return;
         }

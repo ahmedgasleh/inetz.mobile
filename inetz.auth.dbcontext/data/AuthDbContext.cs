@@ -59,11 +59,13 @@ namespace inetz.auth.dbcontext.data
                 entity.Property(e => e.UserPassWord)
                     .HasMaxLength(256)
                     .IsRequired();
+              
 
                 entity.Property(e => e.UserEmail)
                     .HasMaxLength(50)
                     .IsRequired();
-
+                entity.Property(e => e.BinHash).HasMaxLength(256);
+                entity.Property(e => e.BinExpiresAt).HasColumnType("datetime");
                 entity.Property(e => e.LastName).HasMaxLength(32);
                 entity.Property(e => e.FirstName).HasMaxLength(32);
                 entity.Property(e => e.Address).HasMaxLength(50);

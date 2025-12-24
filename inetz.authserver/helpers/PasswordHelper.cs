@@ -1,5 +1,7 @@
 ﻿using inetz.auth.dbcontext.models;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace inetz.authserver.helpers
 {
@@ -26,6 +28,19 @@ namespace inetz.authserver.helpers
         {
             var result = _hasher.VerifyHashedPassword(user, hashedDevice, deviceId);
             return result == PasswordVerificationResult.Success;
+        }
+        public static string GenerateBin ()
+        {
+            // Range: 00000 – 99999
+            int value = RandomNumberGenerator.GetInt32(0, 100000);
+            return value.ToString("D5"); // zero-padded
+        }
+        public static string HashBin ( string bin )
+        {
+            using var sha = SHA256.Create();
+            byte [] bytes = Encoding.UTF8.GetBytes(bin);
+            byte [] hash = sha.ComputeHash(bytes);
+            return Convert.ToBase64String(hash);
         }
     }
 }

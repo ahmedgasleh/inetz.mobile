@@ -1,12 +1,14 @@
-﻿using inetz.auth.dbcontext.models;
+﻿using inetz.auth.dbcontext.data;
+using inetz.auth.dbcontext.models;
 using inetz.auth.dbcontext.services;
 using inetz.authserver.helpers;
+using inetz.ifinance.dbcontext.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-using System;
-using inetz.auth.dbcontext.data;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text.Json.Nodes;
 
 namespace inetz.authserver.Controllers
@@ -34,11 +36,7 @@ namespace inetz.authserver.Controllers
                 return Ok(new { exists = false });
         }
 
-        [HttpGet("verifyBin")]
-        public async Task<IActionResult> VerifyBin ( [FromQuery] string userBin )
-        {
-            return Ok(new { valid = userBin.StartsWith("12345") });
-        }
+        
 
         [HttpPost("register1")]
         public async Task<IActionResult> Register ( [FromBody] UserProfile userProfile )
@@ -127,6 +125,51 @@ namespace inetz.authserver.Controllers
 
             return Ok(new AuthResponse(access, exp, rawRefresh, refreshEntity.ExpiresUtc));
         }
+
+        [HttpPost("verifyBin")]
+        public async Task<IActionResult> VerifyBin ( [FromBody] VerifyBinRequest request )
+        {
+            var user = await _db.UserProfiles
+                .FirstOrDefaultAsync(u => u.Id == request.UserId);
+
+            if (user == null)
+                return Unauthorized();
+
+            // 1️⃣ Expiration check
+            if (user.BinExpiresAt < DateTime.UtcNow)
+                return Unauthorized("BIN expired");
+
+            // 2️⃣ Attempt limit
+            if (user.BinAttempts >= 5)
+                return Unauthorized("BIN locked");
+
+            // 3️⃣ Hash user input
+            string inputHash = PasswordHelper.HashBin(request.Bin);
+
+            // 4️⃣ Constant-time comparison
+            bool isValid = CryptographicOperations.FixedTimeEquals(
+                Convert.FromBase64String(user.BinHash),
+                Convert.FromBase64String(inputHash)
+            );
+
+            if (!isValid)
+            {
+                user.BinAttempts++;
+                await _db.SaveChangesAsync();
+                return Unauthorized("Invalid BIN");
+            }
+
+            // 5️⃣ Success → mark device trusted
+            user.BinHash = null;
+            user.BinExpiresAt = DateTime.Now;
+            user.BinAttempts = 0;
+            user.DeviceVerified = true;
+
+            await _db.SaveChangesAsync();
+
+            return Ok();
+        }
+
 
         [HttpPost("refresh")]
         public async Task<IActionResult> Refresh ( [FromBody] RefreshDto dto )
