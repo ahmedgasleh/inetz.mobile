@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
-using inetz.ifinance.app.ViewModel;
+
 using inetz.ifinance.app.ViewModels;
 using inetz.ifinance.app.Views;
 using Microsoft.Extensions.Logging;
@@ -40,6 +40,7 @@ namespace inetz.ifinance.app
             builder.Services.AddSingleton<RegistrationStep1ViewModel>();
             builder.Services.AddSingleton<RegistrationStep2ViewModel>();
             builder.Services.AddSingleton<LoginViewModel>();
+            builder.Services.AddSingleton<BinViewModel>();
 
 
             return builder;
@@ -49,6 +50,9 @@ namespace inetz.ifinance.app
         {
             builder.Services.AddTransient<SplashPage>();
             builder.Services.AddTransient<RegistrationStep1Page>();
+            builder.Services.AddTransient<RegistrationStep2Page>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<BinViewModel>();
 
 
             return builder;

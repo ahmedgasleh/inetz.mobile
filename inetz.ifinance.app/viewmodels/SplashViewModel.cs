@@ -1,17 +1,20 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
-using inetz.ifinance.app.ViewModel.Base;
+using inetz.ifinance.app.ViewModels.Base;
 
 
-namespace inetz.ifinance.app.ViewModel
+namespace inetz.ifinance.app.ViewModels
 {
     public partial class SplashViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
-        public SplashViewModel ( INavigationService navigationService )
+        private readonly DeviceService _device_service;
+        public SplashViewModel ( INavigationService navigationService, DeviceService device_service )
         {
             _navigationService = navigationService;
+            _device_service = device_service;
         }
 
         
@@ -19,7 +22,11 @@ namespace inetz.ifinance.app.ViewModel
         [RelayCommand]
         public async Task CheckStartupAsync ()
         {
-            await _navigationService.GoToRegister("//register1");
+            var result = await _device_service.GetDeviceIdAsync();
+            if(string.IsNullOrWhiteSpace(result.Id))
+                await _navigationService.GoToBin("//bin");  //await _navigationService.GoToRegister("//register1");
+            else
+                await _navigationService.GoToBin("//bin");  //await _navigationService.GoToLogin("//login");
 
             return;
         }

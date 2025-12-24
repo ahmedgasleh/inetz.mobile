@@ -6,12 +6,12 @@ using inetz.auth.app.models;
 using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
-using inetz.ifinance.app.ViewModel.Base;
+using inetz.ifinance.app.ViewModels.Base;
 
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace inetz.ifinance.app.ViewModel
+namespace inetz.ifinance.app.ViewModels
 {
     public partial class RegistrationStep1ViewModel : ViewModelBase, IQueryAttributable
     {

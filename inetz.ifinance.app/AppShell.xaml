@@ -8,6 +8,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="inetz.ifinance.app">
 
+ 
     <!-- Register routes -->
     <ShellContent Route="splash" ContentTemplate="{DataTemplate views:SplashPage}" />
 
@@ -16,6 +17,7 @@
     <ShellContent Route="register2" ContentTemplate="{DataTemplate views:RegistrationStep2Page}" />
     <ShellContent Route="login" ContentTemplate="{DataTemplate views:LoginPage}" />
     <ShellContent Route="home" ContentTemplate="{DataTemplate views:HomePage}" />
+    <ShellContent Route="bin" ContentTemplate="{DataTemplate views:Bin}" />
 
 
 </Shell>

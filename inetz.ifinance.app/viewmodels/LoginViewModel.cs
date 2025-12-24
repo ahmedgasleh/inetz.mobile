@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
-using inetz.ifinance.app.ViewModel.Base;
+using inetz.ifinance.app.ViewModels.Base;
 using inetz.ifinance.app.Views;
 using System;
 using System.Collections.Generic;
@@ -70,7 +70,7 @@ namespace inetz.ifinance.app.ViewModels
                     await _device_service.SaveAsync(tokenResponse);
 
                     await MainThread.InvokeOnMainThreadAsync(() =>
-                        _navigationService.GoToLogin("home"));
+                        _navigationService.GoToHome("home"));
                 }
                 else
                 {

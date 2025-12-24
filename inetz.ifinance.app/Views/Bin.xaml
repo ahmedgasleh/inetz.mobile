@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:inetz.ifinance.app.Views.Base"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:inetz.ifinance.app.ViewModels"
+    x:Class="inetz.ifinance.app.Views.Bin"
+     x:DataType="vm:BinViewModel">
+
+    <!-- Dimmed background -->
+    <Grid BackgroundColor="#80000000"
+          Padding="24">
+
+        <!-- Popup card -->
+        <Border
+            BackgroundColor="White"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 16"
+            Padding="24"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <VerticalStackLayout Spacing="16" Padding="24" HorizontalOptions="Center">
+
+                <Label
+                    Text="Enter your 5-digit BIN"
+                    FontSize="22"
+                    HorizontalOptions="Center" />
+
+                <!-- BIN dots -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="12">
+                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
+                           BackgroundColor="{Binding Dot1Color}" />
+                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
+                           BackgroundColor="{Binding Dot2Color}" />
+                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
+                           BackgroundColor="{Binding Dot3Color}" />
+                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
+                           BackgroundColor="{Binding Dot4Color}" />
+                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
+                           BackgroundColor="{Binding Dot5Color}" />
+                </HorizontalStackLayout>
+
+                <!-- Error -->
+                <Label
+                    Text="{Binding ErrorMessage}"
+                    TextColor="Red"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding ErrorMessage, Converter={StaticResource NullOrEmptyToFalseConverter}}" />
+
+                <!-- Keypad -->
+                <Grid
+                    RowDefinitions="Auto,Auto,Auto,Auto"
+                    ColumnDefinitions="Auto,Auto,Auto"
+                    RowSpacing="12"
+                    ColumnSpacing="12"
+                    HorizontalOptions="Center">
+
+                    <!-- 1–9 -->
+                    <Button Text="1" Command="{Binding AddDigitCommand}" CommandParameter="1"/>
+                    <Button Text="2" Command="{Binding AddDigitCommand}" CommandParameter="2" Grid.Column="1"/>
+                    <Button Text="3" Command="{Binding AddDigitCommand}" CommandParameter="3" Grid.Column="2"/>
+
+                    <Button Text="4" Command="{Binding AddDigitCommand}" CommandParameter="4" Grid.Row="1"/>
+                    <Button Text="5" Command="{Binding AddDigitCommand}" CommandParameter="5" Grid.Row="1" Grid.Column="1"/>
+                    <Button Text="6" Command="{Binding AddDigitCommand}" CommandParameter="6" Grid.Row="1" Grid.Column="2"/>
+
+                    <Button Text="7" Command="{Binding AddDigitCommand}" CommandParameter="7" Grid.Row="2"/>
+                    <Button Text="8" Command="{Binding AddDigitCommand}" CommandParameter="8" Grid.Row="2" Grid.Column="1"/>
+                    <Button Text="9" Command="{Binding AddDigitCommand}" CommandParameter="9" Grid.Row="2" Grid.Column="2"/>
+
+                    <!-- Actions -->
+                    <Button Text="⌫" Command="{Binding RemoveDigitCommand}" Grid.Row="3"/>
+                    <Button Text="0" Command="{Binding AddDigitCommand}" CommandParameter="0" Grid.Row="3" Grid.Column="1"/>
+                    <Button Text="OK"
+                            Command="{Binding VerifyBinCommand}"
+                            IsEnabled="{Binding CanVerify}"
+                            Grid.Row="3"
+                            Grid.Column="2"/>
+                </Grid>
+
+                <ActivityIndicator
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}" />
+
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</views:ContentPageBase>

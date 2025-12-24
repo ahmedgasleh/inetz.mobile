@@ -15,4 +15,16 @@ namespace inetz.ifinance.app.Models
         public string? Address { get; set; } = string.Empty;
         public string? DeviceId { get; set; } = string.Empty;
     }
+
+    public class VerifyBin
+    {
+        public string? DeviceId { get; set; } = string.Empty;
+        public string? Bin { get; set; } = string.Empty;
+    }
+    public class VerifyBinResponse
+    {
+        public bool Success { get; set; }
+        public bool IsLocked { get; set; }
+        public int RemainingAttempts { get; set; }
+    }
 }

@@ -12,6 +12,7 @@
         Task GoToRegisterUpdate ( string? userId );
         Task GoToLogin ( string? returnUrl );
         Task GoToHome ( string? returnUrl );
+        Task GoToBin ( string? returnUrl );
 
         //Task GoToSelectedOrderDetail ( long selectedOrderId );
 

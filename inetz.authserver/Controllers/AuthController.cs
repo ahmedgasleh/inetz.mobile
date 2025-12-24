@@ -34,6 +34,12 @@ namespace inetz.authserver.Controllers
                 return Ok(new { exists = false });
         }
 
+        [HttpGet("verifyBin")]
+        public async Task<IActionResult> VerifyBin ( [FromQuery] string userBin )
+        {
+            return Ok(new { valid = userBin.StartsWith("12345") });
+        }
+
         [HttpPost("register1")]
         public async Task<IActionResult> Register ( [FromBody] UserProfile userProfile )
         {

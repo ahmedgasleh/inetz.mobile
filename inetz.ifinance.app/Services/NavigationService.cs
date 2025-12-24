@@ -32,7 +32,10 @@ namespace inetz.ifinance.app.Services
         => Navigate("//login", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
 
         public Task GoToHome ( string? returnUrl )
-       => Navigate("//Home", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
+       => Navigate("//home", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
+
+        public Task GoToBin ( string? returnUrl )
+        => Navigate("//bin", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
 
 
 

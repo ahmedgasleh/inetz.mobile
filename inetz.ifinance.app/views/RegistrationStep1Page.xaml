@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:inetz.ifinance.app.Views.Base"
              x:Class="inetz.ifinance.app.Views.RegistrationStep1Page"
+             xmlns:vm="clr-namespace:inetz.ifinance.app.ViewModels"
+             x:DataType="vm:RegistrationStep1ViewModel"
              Title="RegistrationStep1Page">
     <Grid RowDefinitions=".3*,.3*,.1*,.3*" RowSpacing="10" Padding="10">
         <!-- inputs (bind Text to the viewmodel) -->
@@ -62,12 +64,12 @@
                 HorizontalOptions="Fill" />
 
                 <!-- small activity indicator -->
-                <ActivityIndicator
+                <!--<ActivityIndicator
                 IsRunning="{Binding IsBusy}"
                 IsVisible="{Binding IsBusy}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Margin="0,8,0,0" />
+                Margin="0,8,0,0" />-->
 
                 <!-- server / validation error message -->
                 <Label

@@ -65,7 +65,7 @@ namespace inetz.ifinance.app.ViewModels
                     return;
                 }
 
-                var data = JsonSerializer.Deserialize<dynamic>(result?.Data.ToString());
+                var data = JsonSerializer.Deserialize<dynamic>(result.Data.ToString());
 
                 await _navigationService.GoToLogin("login");
 

@@ -1,4 +1,4 @@
-using inetz.ifinance.app.ViewModel;
+using inetz.ifinance.app.ViewModels;
 
 namespace inetz.ifinance.app.Views;
 

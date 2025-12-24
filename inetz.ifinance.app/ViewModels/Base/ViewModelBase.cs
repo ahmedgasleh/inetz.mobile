@@ -1,12 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace inetz.ifinance.app.ViewModel.Base
+
+namespace inetz.ifinance.app.ViewModels.Base
 {
     public partial class ViewModelBase : ObservableValidator, IViewModelBase
     {

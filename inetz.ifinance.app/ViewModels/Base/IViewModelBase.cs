@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 
-namespace inetz.ifinance.app.ViewModel.Base
+namespace inetz.ifinance.app.ViewModels.Base
 {
     public interface IViewModelBase
     {
