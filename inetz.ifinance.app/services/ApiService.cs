@@ -13,7 +13,7 @@ namespace inetz.ifinance.app.Services
 
         public ApiService ()
         {
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://l2d1kp1z-7206.use.devtunnels.ms/") };
+            _httpClient = new HttpClient { BaseAddress = new Uri("https://t5s5j11p-7206.use.devtunnels.ms/") };
         }
 
         public async Task<ApiResult<T>> PostAsync<T> ( string endpoint, object payload )

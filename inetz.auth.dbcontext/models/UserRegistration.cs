@@ -17,7 +17,7 @@ namespace inetz.ifinance.dbcontext.Models
     }
 public class VerifyBinRequest
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; } = string.Empty;
         public string Bin { get; set; } = string.Empty;
     }
 

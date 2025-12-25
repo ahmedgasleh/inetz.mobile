@@ -2,6 +2,8 @@
 using inetz.auth.dbcontext.models;
 using inetz.auth.dbcontext.services;
 using inetz.authserver.helpers;
+using inetz.authserver.models;
+using inetz.authserver.services;
 using inetz.ifinance.dbcontext.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +21,13 @@ namespace inetz.authserver.Controllers
     {
         private readonly ITokenService _tokens;
         private readonly AuthDbContext _db;
+        private readonly IConfiguration _configuration;
 
-        public AuthController ( ITokenService tokens, AuthDbContext db )
+        public AuthController ( ITokenService tokens, AuthDbContext db, IConfiguration configuration )
         {
             _tokens = tokens;
             _db = db;
+            _configuration = configuration;
         }
 
         [HttpGet("exist")]
@@ -125,12 +129,44 @@ namespace inetz.authserver.Controllers
 
             return Ok(new AuthResponse(access, exp, rawRefresh, refreshEntity.ExpiresUtc));
         }
+        [HttpPost("createBin")]
+        public async Task<IActionResult> CreateBin ( [FromBody] LoginDto bin )
+        {
+            var existRecord = await Task.Run(() => _db.UserProfiles.Any(u => u.UserId == bin.UserId  && u.DeviceId == bin.DeviceId));
+
+            if (existRecord) { 
+
+                return Ok(new { Bin = PasswordHelper.GenerateBin() });
+
+            } else return BadRequest("Device is not registerd with user id");
+        }
+
+        [HttpPost("saveBin")]
+        public async Task<IActionResult> SaveBin ( [FromBody] VerifyBinRequest request )
+        {
+            var user = await _db.UserProfiles
+                .FirstOrDefaultAsync(u => u.UserId == request.UserId);
+
+            if (user == null)
+                return Unauthorized();
+
+            string inputHash = PasswordHelper.HashBin(request.Bin);
+
+            user.BinHash = inputHash;
+            user.BinExpiresAt = DateTime.Now;
+            user.BinAttempts = 0;
+
+            await _db.SaveChangesAsync();
+
+            return Ok();
+        }
+
 
         [HttpPost("verifyBin")]
         public async Task<IActionResult> VerifyBin ( [FromBody] VerifyBinRequest request )
         {
             var user = await _db.UserProfiles
-                .FirstOrDefaultAsync(u => u.Id == request.UserId);
+                .FirstOrDefaultAsync(u => u.UserId == request.UserId);
 
             if (user == null)
                 return Unauthorized();
@@ -160,12 +196,32 @@ namespace inetz.authserver.Controllers
             }
 
             // 5️⃣ Success → mark device trusted
-            user.BinHash = null;
+           //user.BinHash = string.Empty;
             user.BinExpiresAt = DateTime.Now;
             user.BinAttempts = 0;
             user.DeviceVerified = true;
 
             await _db.SaveChangesAsync();
+
+            return Ok();
+        }
+        [HttpPost("sendBin")]
+        public async Task<IActionResult> SendApplicationCode ( [FromBody] EmailShareLink link )
+        {
+            try
+            {
+                var mailService = new MailService(_configuration);
+                var body = _configuration ["EmailOptions:BodyTextEmail01"]?.Replace("{data1}", link.Bin);
+                var mailRequest = new SendEmailRequest(link.ShareEmail, _configuration ["EmailOptions:Subject"] ?? string.Empty, body ?? string.Empty);
+
+                await Task.Run(() => mailService.SendEmailAsync(mailRequest).Wait());
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+           
 
             return Ok();
         }
@@ -177,7 +233,7 @@ namespace inetz.authserver.Controllers
             var hash = _tokens.Hash(dto.RefreshToken);
             var token = await _db.RefreshTokens.FirstOrDefaultAsync(t => t.TokenHash == hash);
 
-            bool IsActive = token.RevokedUtc == null && DateTime.UtcNow < token.ExpiresUtc;
+            bool IsActive = token?.RevokedUtc == null && DateTime.UtcNow < token.ExpiresUtc;
 
             if (token is null || !IsActive || token.DeviceId != dto.DeviceId)
                 return Unauthorized();
@@ -204,6 +260,7 @@ namespace inetz.authserver.Controllers
     }
 
     public record LoginDto ( string UserId, string Password, string DeviceId );
+    public record BinDto ( string UserId, string DeviceId );
     public record RefreshDto ( string RefreshToken, string DeviceId );
     public record AuthResponse ( string AccessToken, DateTime AccessTokenExpiresUtc, string RefreshToken, DateTime RefreshTokenExpiresUtc );
 

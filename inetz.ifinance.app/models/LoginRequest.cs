@@ -12,4 +12,10 @@ namespace inetz.ifinance.app.Models
         public string? Password { get; set; }
         public string? DeviceId { get; set; }
     }
+
+    public class VerifyBinRequest
+    {
+        public string UserId { get; set; } = string.Empty;
+        public string Bin { get; set; } = string.Empty;
+    }
 }

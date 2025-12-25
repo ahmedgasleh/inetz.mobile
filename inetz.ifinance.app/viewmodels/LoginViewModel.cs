@@ -69,6 +69,28 @@ namespace inetz.ifinance.app.ViewModels
 
                     await _device_service.SaveAsync(tokenResponse);
 
+                    var newBin = await _api.PostAsync<object>("api/auth/createBin", new LoginRequest
+                    {
+                        UserId = UserId,
+                        Password = string.Empty,
+                        DeviceId = result.Id,
+                    });
+
+
+                    if (newBin.IsSuccess)
+                    {
+                        var binData = JsonSerializer.Deserialize<dynamic>(newBin?.Data?.ToString() ?? string.Empty);
+                        var bin = binData?.GetProperty("bin").ToString() ?? string.Empty;
+
+                        var saveBin = await _api.PostAsync<object>("api/auth/saveBin", new VerifyBinRequest
+                        {
+                            UserId = UserId,
+                            Bin = bin,
+                        });
+
+
+                    }
+
                     await MainThread.InvokeOnMainThreadAsync(() =>
                         _navigationService.GoToHome("home"));
                 }
