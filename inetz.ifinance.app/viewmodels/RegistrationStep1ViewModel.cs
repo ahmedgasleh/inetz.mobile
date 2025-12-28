@@ -27,7 +27,7 @@ namespace inetz.ifinance.app.ViewModels
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(NextCommand))]
-        private string phoneNumber = string.Empty;
+        private string phoneNumber ;
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(NextCommand))]

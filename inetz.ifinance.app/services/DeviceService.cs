@@ -49,6 +49,8 @@ namespace inetz.ifinance.app.Services
         private const string AccessTokenKey = "access_token";
         private const string RefreshTokenKey = "refresh_token";
         private const string ExpiryKey = "token_expiry";
+        private const string UserBinVerifiedKeyV1 = "bin_verified_v1";
+        private const string UserBindKeyV1 = "bin_v1";
 
         public async Task SaveAsync ( TokenResponse token )
         {

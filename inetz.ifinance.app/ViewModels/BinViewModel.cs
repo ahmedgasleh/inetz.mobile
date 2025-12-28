@@ -6,9 +6,11 @@ using inetz.ifinance.app.Services.Interfaces;
 using inetz.ifinance.app.ViewModels.Base;
 using Microsoft.Maui.Graphics;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace inetz.ifinance.app.ViewModels
 {
+    [QueryProperty(nameof(UserId), "UserId")]
     public partial class BinViewModel : ViewModelBase, IQueryAttributable
     {
         private readonly ApiService _api;
@@ -24,6 +26,9 @@ namespace inetz.ifinance.app.ViewModels
             _deviceService = deviceService;
             _navigationService = navigationService;
         }
+
+        [ObservableProperty]
+        private string? userId;
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(AddDigitCommand))]
@@ -92,28 +97,45 @@ namespace inetz.ifinance.app.ViewModels
                 var deviceId = await SecureStorage.GetAsync("device_id_v1");
                // var result1 = await _api.VerifyBinAsync(deviceId!, Bin);
 
-                var result = await _api.PostAsync<VerifyBinResponse>("api/auth/verifyBin", new VerifyBin { 
+                var result = await _api.PostAsync<object>("api/auth/verifyBin", new VerifyBinRequest
+                { 
                 
-                    DeviceId = deviceId!,
+                    UserId = UserId,
                     Bin = Bin
                 });
 
-                if ( result.IsSuccess && result.Data.IsLocked)
+                var data = JsonSerializer.Deserialize<dynamic>(result?.Data?.ToString());
+
+                var isLocked = data?.GetProperty("isLocked").GetBoolean();
+                var binValidated = data?.GetProperty("success").GetBoolean();
+
+                if ( result.IsSuccess && isLocked)
                 {
-                    await Shell.Current.GoToAsync("//login");
+                    await _navigationService.GoToLogin("login");
                     return;
                 }
 
                 if (!result.IsSuccess)
                 {
-                    ErrorMessage = $"Invalid BIN. Attempts left: {result.Data.RemainingAttempts}";
+                    ErrorMessage = $"Invalid BIN. Attempts left: {data?.RemainingAttempts}";
                     Bin = string.Empty;
                     return;
                 }
 
-                await SecureStorage.SetAsync("bin_verified_v1", "true");
-               
-                await Shell.Current.GoToAsync("//home");
+                if (binValidated)
+                {
+                    await SecureStorage.SetAsync("bin_verified_v1", "true");
+
+                    //await Shell.Current.GoToAsync("//home");
+                    await _navigationService.GoToHome("home");
+                }else              
+                    ErrorMessage = "BIN verification failed.";
+
+            }
+
+            catch (Exception ex)
+            {
+                ErrorMessage = ex.Message;
             }
             finally
             {

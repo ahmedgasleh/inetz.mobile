@@ -1,4 +1,5 @@
-﻿using inetz.auth.dbcontext.data;
+﻿using Azure.Core;
+using inetz.auth.dbcontext.data;
 using inetz.auth.dbcontext.models;
 using inetz.auth.dbcontext.services;
 using inetz.authserver.helpers;
@@ -158,7 +159,7 @@ namespace inetz.authserver.Controllers
 
             await _db.SaveChangesAsync();
 
-            return Ok();
+            return Ok(new {});
         }
 
 
@@ -172,12 +173,12 @@ namespace inetz.authserver.Controllers
                 return Unauthorized();
 
             // 1️⃣ Expiration check
-            if (user.BinExpiresAt < DateTime.UtcNow)
-                return Unauthorized("BIN expired");
+            //if (user.BinExpiresAt < DateTime.UtcNow)
+            //    return Ok(new VerifyBinResponse { IsLocked = false, RemainingAttempts = 5 - user.BinAttempts, Success = false });
 
             // 2️⃣ Attempt limit
             if (user.BinAttempts >= 5)
-                return Unauthorized("BIN locked");
+                return Ok(new VerifyBinResponse { IsLocked = false, RemainingAttempts = 5 - user.BinAttempts, Success = false });
 
             // 3️⃣ Hash user input
             string inputHash = PasswordHelper.HashBin(request.Bin);
@@ -192,7 +193,7 @@ namespace inetz.authserver.Controllers
             {
                 user.BinAttempts++;
                 await _db.SaveChangesAsync();
-                return Unauthorized("Invalid BIN");
+                return Ok(new VerifyBinResponse { IsLocked = false, RemainingAttempts = 5 - user.BinAttempts, Success = false});
             }
 
             // 5️⃣ Success → mark device trusted
@@ -203,18 +204,27 @@ namespace inetz.authserver.Controllers
 
             await _db.SaveChangesAsync();
 
-            return Ok();
+            return Ok(new VerifyBinResponse { IsLocked = false, RemainingAttempts = 0, Success = true });
         }
         [HttpPost("sendBin")]
-        public async Task<IActionResult> SendApplicationCode ( [FromBody] EmailShareLink link )
+        public async Task<IActionResult> SendApplicationCode ( [FromBody] VerifyBinRequest link )
         {
             try
             {
+                var user = await _db.UserProfiles
+                    .FirstOrDefaultAsync(u => u.UserId == link.UserId);
+
+                if (user == null) return Unauthorized();
+
                 var mailService = new MailService(_configuration);
                 var body = _configuration ["EmailOptions:BodyTextEmail01"]?.Replace("{data1}", link.Bin);
-                var mailRequest = new SendEmailRequest(link.ShareEmail, _configuration ["EmailOptions:Subject"] ?? string.Empty, body ?? string.Empty);
+                var mailRequest = new SendEmailRequest(user?.UserEmail ?? string.Empty, _configuration ["EmailOptions:Subject"] ?? string.Empty, body ?? string.Empty);
 
-                await Task.Run(() => mailService.SendEmailAsync(mailRequest).Wait());
+                await Task.Run(() => mailService.SendEmailAsync(mailRequest).Wait()); 
+                
+                return Ok(new {});
+
+                
             }
             catch (Exception ex)
             {
@@ -223,7 +233,7 @@ namespace inetz.authserver.Controllers
             }
            
 
-            return Ok();
+           
         }
 
 

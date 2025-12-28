@@ -88,11 +88,37 @@ namespace inetz.ifinance.app.ViewModels
                             Bin = bin,
                         });
 
+                        if (saveBin.IsSuccess)
+                        {
+                            var sendResult = await _api.PostAsync<object>("api/auth/sendBin", new VerifyBinRequest
+                            {
+                                UserId = UserId,
+                                Bin = bin,
+                            });
+
+                            if(sendResult.IsSuccess)
+                            {
+                                await SecureStorage.SetAsync("bin_v1", bin);
+                                await MainThread.InvokeOnMainThreadAsync(() => _navigationService.GoToBin(UserId));
+                            }
+                        }
+                        else
+                        {
+                            ErrorMessage = saveBin?.Error ?? "Saving bin failed";
+                            return;
+                        }
+
+
 
                     }
+                    else
+                    {
+                        ErrorMessage = newBin?.Error ?? "New bin failed, login agian";
+                        return;
+                    }
 
-                    await MainThread.InvokeOnMainThreadAsync(() =>
-                        _navigationService.GoToHome("home"));
+
+                        
                 }
                 else
                 {

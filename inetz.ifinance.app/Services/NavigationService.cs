@@ -34,8 +34,8 @@ namespace inetz.ifinance.app.Services
         public Task GoToHome ( string? returnUrl )
        => Navigate("//home", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
 
-        public Task GoToBin ( string? returnUrl )
-        => Navigate("//bin", new Dictionary<string, object> { { "ReturnUrl", returnUrl ?? string.Empty } });
+        public Task GoToBin ( string? userId )
+        => Navigate("//bin", new Dictionary<string, object> { ["UserId"] = userId ?? string.Empty });
 
 
 
