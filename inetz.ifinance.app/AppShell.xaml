@@ -4,32 +4,47 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      xmlns:views="clr-namespace:inetz.ifinance.app.Views"
+    xmlns:controls="clr-namespace:inetz.ifinance.app.Controls"
     xmlns:local="clr-namespace:inetz.ifinance.app"
     Shell.FlyoutBehavior="Flyout">
 
- 
-    <!-- Register routes --><!--
-    <ShellContent Route="splash" ContentTemplate="{DataTemplate views:SplashPage}" />
+    <!-- This is the content for the navigation bar -->
+    <Shell.TitleView>
+        <Grid ColumnDefinitions=".2*, .6*, Auto">
+            <Image Grid.Column="1"
+               Source="logo_02.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"  HeightRequest="30" Aspect="AspectFit"/>
+            <HorizontalStackLayout Grid.Column="2"
+                               Spacing="0" >
+                <Button ImageSource="illustrated_plus_sign_purple.png"
+                    Padding="0"
+                    BackgroundColor="White" HeightRequest="20"/>
+                <Button ImageSource="illustrated_pencil_purple.png"
+                    Padding="0"
+                    HeightRequest="20"
+                    BackgroundColor="White" />
+            </HorizontalStackLayout>
+        </Grid>
+    </Shell.TitleView>
 
-    --><!-- We'll use two absolute routes for root replacement: //register and //login --><!--
-    <ShellContent Route="register1" ContentTemplate="{DataTemplate views:RegistrationStep1Page}" />
-    <ShellContent Route="register2" ContentTemplate="{DataTemplate views:RegistrationStep2Page}" />
-    <ShellContent Route="login" ContentTemplate="{DataTemplate views:LoginPage}" />-->
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHead />
+    </Shell.FlyoutHeader>
+
     <ShellContent Route="home" ContentTemplate="{DataTemplate views:HomePage}" />
     <ShellContent Route="bin" ContentTemplate="{DataTemplate views:Bin}" />
 
     <FlyoutItem Title="" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent 
+            Title="Profile" 
+            ContentTemplate="{DataTemplate views:HomePage}"/>
         <ShellContent
-      Title="Profile"
-      ContentTemplate="{DataTemplate views:HomePage}"/>
-
+            Title="Profile"
+            ContentTemplate="{DataTemplate views:Profile}"/>
         <ShellContent
-     Title="Profile"
-     ContentTemplate="{DataTemplate views:LoginPage}"/>
-        <ShellContent
-     Title="Logout"
-     ContentTemplate="{DataTemplate views:Bin}"/>
+            Title="Logout"
+            ContentTemplate="{DataTemplate views:Logout}"/>
     </FlyoutItem>
-
 
 </Shell>

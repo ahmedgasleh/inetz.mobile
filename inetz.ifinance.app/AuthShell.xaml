@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   
+             xmlns:views="clr-namespace:inetz.ifinance.app.Views"
+             x:Class="inetz.ifinance.app.AuthShell"
+             Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent Route="register1" ContentTemplate="{DataTemplate views:RegistrationStep1Page}" />
+    <ShellContent Route="register2" ContentTemplate="{DataTemplate views:RegistrationStep2Page}" />
+    <ShellContent Route="login" ContentTemplate="{DataTemplate views:LoginPage}" /> 
+   
+    <ShellContent Route="bin" ContentTemplate="{DataTemplate views:Bin}" />
+
+
+</Shell>

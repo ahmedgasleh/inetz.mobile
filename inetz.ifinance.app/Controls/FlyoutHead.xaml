@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="inetz.ifinance.app.Controls.FlyoutHead"
+             HeightRequest="200">
+    <Grid BackgroundColor="Gray" RowDefinitions=".6*, .3*">
+        <Border Grid.Row="0" Grid.ColumnSpan="2" StrokeThickness="1">
+            <Image Aspect="AspectFill" 
+               Source="logo_02.png" 
+               Opacity="0.6" 
+               HeightRequest="75"/>
+        </Border>
+
+        <Grid Grid.Row="1" ColumnDefinitions=".25*, .75*" BackgroundColor="White">
+            <Border Grid.Column="0" StrokeThickness="0">
+                <Image Source="image_placeholder.png" WidthRequest="60"></Image>
+            </Border>
+            <Grid Grid.Column="1" RowDefinitions=".5*, .5*" Padding="10,12">
+                <Label Grid.Row="0" Text="1 416 816 3585" ></Label>
+                <Label Grid.Row="1" Text="view profile" ></Label>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentView>
