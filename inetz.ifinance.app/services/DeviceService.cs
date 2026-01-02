@@ -73,6 +73,12 @@ namespace inetz.ifinance.app.Services
             return DateTimeOffset.UtcNow.ToUnixTimeSeconds() < expiry;
         }
 
+        public async Task<string?> GetBinAsync (string key = "bin_v1" )
+            => await SecureStorage.GetAsync(key);
+
+        public async Task<string?> GetBinVerifyAsync ( string key = "bin_verified_v1" )
+           => await SecureStorage.GetAsync(key);
+
         public async Task ClearAsync ()
         {
             await  Task.Run(() => ClearToken());

@@ -17,14 +17,16 @@ namespace inetz.ifinance.app.ViewModels
         private const int BinLength = 5;
         private readonly DeviceService _deviceService;
         private readonly INavigationService _navigationService;
+        private readonly StartupCoordinator _startupCoordinator;
 
-       // public event EventHandler? BinVerifiedSuccessfully;
+        // public event EventHandler? BinVerifiedSuccessfully;
 
-        public BinViewModel ( ApiService api, DeviceService deviceService, INavigationService navigationService )
+        public BinViewModel ( ApiService api, DeviceService deviceService, INavigationService navigationService, StartupCoordinator startupCoordinator )
         {
             _api = api;
             _deviceService = deviceService;
             _navigationService = navigationService;
+            _startupCoordinator = startupCoordinator;
         }
 
         [ObservableProperty]
@@ -127,8 +129,11 @@ namespace inetz.ifinance.app.ViewModels
                     await SecureStorage.SetAsync("bin_verified_v1", "true");
 
                     //await Shell.Current.GoToAsync("//home");
-                    await _navigationService.GoToHome("home");
-                }else              
+                    //await _navigationService.GoToHome("home");
+
+                    await _startupCoordinator.DecideAsync();  
+                }
+                else              
                     ErrorMessage = "BIN verification failed.";
 
             }

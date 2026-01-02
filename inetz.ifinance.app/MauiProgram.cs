@@ -10,6 +10,7 @@ namespace inetz.ifinance.app
 {
     public static class MauiProgram
     {
+        public static IServiceProvider Services { get; private set; } = null!;
         public static MauiApp CreateMauiApp ()
         {
             var builder = MauiApp.CreateBuilder();
@@ -29,13 +30,18 @@ namespace inetz.ifinance.app
             builder.Logging.AddDebug();
 #endif
 
-           
+            var app = builder.Build();
 
-            return builder.Build();
+
+            // 🔹 Store ServiceProvider
+            Services = app.Services;
+
+            return app;
         }
 
         private static MauiAppBuilder RegisterViewModels ( this MauiAppBuilder builder )
         {
+            builder.Services.AddSingleton<StartupCoordinator>();
             builder.Services.AddSingleton<SplashViewModel>();
             builder.Services.AddSingleton<RegistrationStep1ViewModel>();
             builder.Services.AddSingleton<RegistrationStep2ViewModel>();
@@ -48,6 +54,8 @@ namespace inetz.ifinance.app
 
         private static MauiAppBuilder RegisterViews ( this MauiAppBuilder builder )
         {
+            builder.Services.AddSingleton<AppShell>();
+            builder.Services.AddSingleton<AuthShell>();
             builder.Services.AddTransient<SplashPage>();
             builder.Services.AddTransient<RegistrationStep1Page>();
             builder.Services.AddTransient<RegistrationStep2Page>();
