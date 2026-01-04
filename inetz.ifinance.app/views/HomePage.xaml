@@ -6,10 +6,173 @@
              xmlns:vm="clr-namespace:inetz.ifinance.app.ViewModels"
              Title="HomePage"
             >
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to HOMEPAGE!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid BackgroundColor="#0D0118"
+          RowDefinitions=".05*,.1*,.45*,0.05*,.3*">
+        <Grid Grid.Row="1"
+              Margin="25,10,25,10"></Grid>
+        <CarouselView 
+            IndicatorView="indicatorView"
+            Grid.Row="2"
+            ItemsSource="{Binding Accounts}"
+            PeekAreaInsets="30">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout
+                    ItemSpacing="0"
+                    Orientation="Horizontal"
+                    SnapPointsAlignment="Center"
+                    SnapPointsType="MandatorySingle"/>
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border
+                            Grid.RowSpan="3"
+                            BackgroundColor="#311B45"
+                            HeightRequest="200"
+                            Stroke="#6E557C"
+                            StrokeShape="RoundRectangle 20,20,20,20"
+                            StrokeThickness="2"
+                            WidthRequest="300">
+                            <Grid RowDefinitions=".2*,.5*,.2*">
+                                <Image Aspect="AspectFill"
+                                       Source="image_placeholder.png"
+                                       Grid.RowSpan="3"/>
+                                <RoundRectangle
+                                    Grid.RowSpan="3"
+                                    CornerRadius="30"
+                                    HeightRequest="300"
+                                    WidthRequest="300"
+                                    Opacity=".7">
+                                    <RoundRectangle.Fill>
+                                        <LinearGradientBrush EndPoint="0,1">
+                                            <GradientStop Offset="0"
+                                                          Color="Transparent"/>
+                                            <GradientStop Offset="1"
+                                                          Color="#030005"/>
+
+
+
+                                        </LinearGradientBrush>
+                                    </RoundRectangle.Fill>
+
+                                </RoundRectangle>
+                                <VerticalStackLayout Grid.Row="2"
+                                                     Margin="20,-10,0,0">
+                                    <Label Text="{Binding Balance, StringFormat='{$}'}"
+                                           TextColor="White"/>
+                                    <Label FontSize="Large"
+                                           Text="{Binding AccountType}"
+                                           TextColor="AliceBlue"/>
+                                </VerticalStackLayout>
+                                <Label Margin="0,20,20,0"
+                                       FontFamily="Icons"
+                                       FontSize="25"
+                                       HorizontalOptions="End"
+                                       Text="&#xF096;"
+                                       TextColor="White"/>
+                            </Grid>
+
+                            <Border.Shadow>
+                                <Shadow
+                                    Brush="#C283FD"
+                                    Opacity=".7"
+                                    Radius="50"
+                                    Offset="0,0"/>
+
+                            </Border.Shadow>
+                        </Border>
+
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+        </CarouselView>
+
+        <IndicatorView
+        x:Name="indicatorView"
+        Grid.Row="3"
+        HorizontalOptions="Center"
+        IndicatorColor="#616161"
+        IndicatorSize="8"
+        SelectedIndicatorColor="White"
+        VerticalOptions="Center"/>
+
+        <Grid Grid.Row="5"
+              Margin="15,0,15,0"
+              HeightRequest="75"
+              VerticalOptions="End">
+            <Border BackgroundColor="#311B45"
+                    Stroke="#6E557C"
+                    StrokeShape="RoundRectangle 30,30,30,30"
+                    StrokeThickness="2">
+
+                <Grid
+                    ColumnDefinitions="*,*,*,*"
+                    RowDefinitions="*,*"
+                    RowSpacing="3">
+                    <Label
+                        Grid.Row="1"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Home"
+                        TextColor="White"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Search"
+                        TextColor="White"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Library"
+                        TextColor="White"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        FontSize="10"
+                        HorizontalOptions="Center"
+                        Text="Profile"
+                        TextColor="White"/>
+                    <Label
+                        FontFamily="Icons"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="&#xE80D;"
+                        TextColor="White"
+                        VerticalOptions="End"/>
+                    <Label
+                        Grid.Column="1"
+                        FontFamily="Icons"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="&#xE803;"
+                        TextColor="White"
+                        VerticalOptions="End"/>
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="Icons"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="&#xE80a;"
+                        TextColor="White"
+                        VerticalOptions="End"/>
+                    <Label
+                        Grid.Column="3"
+                        FontFamily="Icons"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="&#xE802;"
+                        TextColor="White"
+                        VerticalOptions="End"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+    
+
 </views:ContentPageBase >

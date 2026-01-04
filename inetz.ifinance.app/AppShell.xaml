@@ -37,7 +37,7 @@
 
     <FlyoutItem Title="" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent 
-            Title="Profile" 
+            Title="Home" 
             ContentTemplate="{DataTemplate views:HomePage}"/>
         <ShellContent
             Title="Profile"
