@@ -1,0 +1,19 @@
+﻿namespace inetz.auth.app.models
+{
+    public partial class UserProfile
+    {
+        public Guid Id { get; set; }
+        public string UserId { get; set; } = string.Empty;
+        public string DeviceId { get; set; } = string.Empty;
+        public string DeviceHash { get; set; } = string.Empty;
+        public string BinHash { get; set; } = string.Empty;
+        public DateTime BinExpiresAt { get; set; } = DateTime.UtcNow;
+        public int BinAttempts { get; set; }
+        public string UserEmail { get; set; } = string.Empty;
+        public string UserPassWord { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string Address { get; set; } = string.Empty;
+
+    }
+}

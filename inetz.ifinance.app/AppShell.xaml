@@ -14,15 +14,15 @@
             <Image Grid.Column="1"
                Source="logo_02.png"
                HorizontalOptions="Center"
-               VerticalOptions="Center"  HeightRequest="30" Aspect="AspectFit"/>
+               VerticalOptions="Center"  HeightRequest="25" Aspect="AspectFit"/>
             <HorizontalStackLayout Grid.Column="2"
                                Spacing="0" >
                 <Button ImageSource="illustrated_plus_sign_purple.png"
-                    Padding="0"
-                    BackgroundColor="White" HeightRequest="20"/>
+                    Padding="4"
+                    BackgroundColor="White" HeightRequest="10"/>
                 <Button ImageSource="illustrated_pencil_purple.png"
-                    Padding="0"
-                    HeightRequest="20"
+                    Padding="4"
+                    HeightRequest="10"
                     BackgroundColor="White" />
             </HorizontalStackLayout>
         </Grid>

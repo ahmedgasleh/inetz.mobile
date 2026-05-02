@@ -7,14 +7,14 @@
              Title="HomePage"
             >
     <Grid BackgroundColor="#0D0118"
-          RowDefinitions=".05*,.1*,.45*,0.05*,.3*">
+          RowDefinitions=".15*,.01*,0.05*,.3*">
         <Grid Grid.Row="1"
-              Margin="25,10,25,10"></Grid>
+              Margin="10,10,10,10"></Grid>
         <CarouselView 
             IndicatorView="indicatorView"
-            Grid.Row="2"
+            Grid.Row="0"
             ItemsSource="{Binding Accounts}"
-            PeekAreaInsets="30">
+            PeekAreaInsets="40">
             <CarouselView.ItemsLayout>
                 <LinearItemsLayout
                     ItemSpacing="0"
@@ -26,21 +26,21 @@
                 <DataTemplate>
                     <Grid>
                         <Border
-                            Grid.RowSpan="3"
+                            Grid.RowSpan="1"
                             BackgroundColor="#311B45"
-                            HeightRequest="200"
+                            HeightRequest="150"
                             Stroke="#6E557C"
                             StrokeShape="RoundRectangle 20,20,20,20"
                             StrokeThickness="2"
                             WidthRequest="300">
-                            <Grid RowDefinitions=".2*,.5*,.2*">
+                            <Grid RowDefinitions=".2*,.3*,.3*">
                                 <Image Aspect="AspectFill"
                                        Source="image_placeholder.png"
                                        Grid.RowSpan="3"/>
                                 <RoundRectangle
                                     Grid.RowSpan="3"
                                     CornerRadius="30"
-                                    HeightRequest="300"
+                                    HeightRequest="150"
                                     WidthRequest="300"
                                     Opacity=".7">
                                     <RoundRectangle.Fill>
@@ -57,7 +57,7 @@
 
                                 </RoundRectangle>
                                 <VerticalStackLayout Grid.Row="2"
-                                                     Margin="20,-10,0,0">
+                                                     Margin="15,-5,0,0">
                                     <Label Text="{Binding Balance, StringFormat='{$}'}"
                                            TextColor="White"/>
                                     <Label FontSize="Large"
@@ -75,8 +75,8 @@
                             <Border.Shadow>
                                 <Shadow
                                     Brush="#C283FD"
-                                    Opacity=".7"
-                                    Radius="50"
+                                    Opacity=".5"
+                                    Radius="20"
                                     Offset="0,0"/>
 
                             </Border.Shadow>
@@ -89,21 +89,28 @@
         </CarouselView>
 
         <IndicatorView
-        x:Name="indicatorView"
-        Grid.Row="3"
-        HorizontalOptions="Center"
-        IndicatorColor="#616161"
-        IndicatorSize="8"
-        SelectedIndicatorColor="White"
-        VerticalOptions="Center"/>
+            x:Name="indicatorView"
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            IndicatorColor="#616161"
+            IndicatorSize="6"
+            SelectedIndicatorColor="White"
+            VerticalOptions="Center"/>
+        <Grid Grid.Row="3"
+               Margin="15,0,15,30">
+            <Border BackgroundColor="#311B45">
+                
+            </Border>
 
-        <Grid Grid.Row="5"
+        </Grid  >
+
+        <Grid Grid.Row="3"
               Margin="15,0,15,0"
               HeightRequest="75"
               VerticalOptions="End">
             <Border BackgroundColor="#311B45"
                     Stroke="#6E557C"
-                    StrokeShape="RoundRectangle 30,30,30,30"
+                    StrokeShape="RoundRectangle 20,20,20,20"
                     StrokeThickness="2">
 
                 <Grid

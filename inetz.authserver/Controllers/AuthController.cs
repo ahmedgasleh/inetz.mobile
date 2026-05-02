@@ -243,7 +243,7 @@ namespace inetz.authserver.Controllers
             var hash = _tokens.Hash(dto.RefreshToken);
             var token = await _db.RefreshTokens.FirstOrDefaultAsync(t => t.TokenHash == hash);
 
-            bool IsActive = token?.RevokedUtc == null && DateTime.UtcNow < token.ExpiresUtc;
+            bool IsActive = token?.RevokedUtc == null && DateTime.UtcNow < token?.ExpiresUtc;
 
             if (token is null || !IsActive || token.DeviceId != dto.DeviceId)
                 return Unauthorized();
@@ -252,7 +252,7 @@ namespace inetz.authserver.Controllers
 
             var (access, exp) = _tokens.CreateAccessToken(token.UserId, token.DeviceId);
             var (rawNew, newEntity) = _tokens.CreateRefreshToken(token.UserId, token.DeviceId);
-            token.ReplacedByTokenHash = newEntity.TokenHash;
+            token.ReplacedByTokenHash = newEntity.TokenHash ?? string.Empty;
 
             _db.RefreshTokens.Add(newEntity);
             await _db.SaveChangesAsync();
