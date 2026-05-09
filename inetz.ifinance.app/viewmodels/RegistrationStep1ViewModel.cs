@@ -27,77 +27,71 @@ namespace inetz.ifinance.app.ViewModels
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(NextCommand))]
-        private string phoneNumber ;
+        private string? phoneNumber ;
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(NextCommand))]
-        private string email = string.Empty;
+        private string? email = string.Empty;
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(NextCommand))]
-        private string password = string.Empty;
+        private string? password = string.Empty;
        
         [ObservableProperty] 
         private string? errorMessage;
 
+        [ObservableProperty]
+        private bool isBusy = false;
+
 
 
         [RelayCommand(CanExecute = nameof(CanNext))]
-        private async void Next ()
+        private async Task Next ()
         {
-           
-                Console.WriteLine("Form is busy ... !");          
-           
+            if (IsBusy)
+                return;
 
             try
             {
-                // Example: call your API to prevalidate or register
-                // This assumes IApiService.RegisterStep1Async returns an ApiResult with Success + ErrorMessage
+                IsBusy = true;
+                ErrorMessage = string.Empty;
+                NextCommand.NotifyCanExecuteChanged();
+
                 var result = await _api.PostAsync<object>("api/auth/register1", new UserProfile
                 {
-                    UserId = PhoneNumber!,
-                    UserEmail = Email!,
-                    UserPassWord = Password!
+                    UserId = PhoneNumber ?? string.Empty,
+                    UserEmail = Email ?? string.Empty,
+                    UserPassWord = Password ?? string.Empty
                 });
 
-                if (!result.IsSuccess)
+                if (result?.IsSuccess != true)
                 {
-                    // show server-side validation error (e.g., email already exists)
-                    ErrorMessage = result.Error ?? "Server rejected the request.";
+                    ErrorMessage = result?.Error ?? "Server rejected the request.";
                     return;
                 }
 
-                var data = JsonSerializer.Deserialize<dynamic>(result?.Data.ToString());
+                var data = JsonSerializer.Deserialize<RegisterStep1Response>(
+                    result.Data?.ToString() ?? string.Empty);
 
-                var id = data?.GetProperty("deviceId").ToString();
-
-                //var data1 = JsonSerializer.Deserialize<UserProfile>(data.ToString());
-
-                //var deid = await _deviceService.GetDeviceIdAsync();
-
-                if (!string.IsNullOrWhiteSpace(id))
+                if (string.IsNullOrWhiteSpace(data?.DeviceId))
                 {
-                    _deviceService.CreateDeviceIdAsync(id!);
+                    ErrorMessage = "Server did not return a device ID.";
+                    return;
                 }
-                else return;
+
+                await _deviceService.CreateDeviceIdAsync(data.DeviceId);
 
                 await _navigationService.GoToRegisterUpdate(PhoneNumber);
-
             }
             catch (Exception ex)
             {
-
-                throw;
+                ErrorMessage = ex.Message;
             }
             finally
             {
-               
+                IsBusy = false;
+                NextCommand.NotifyCanExecuteChanged();
             }
-
-
-
-
-
         }
 
         private bool CanNext ()

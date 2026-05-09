@@ -1,4 +1,4 @@
-﻿using inetz.auth.dbcontext.models;
+﻿using inetz.auth.dbcontext.models.auth;
 using Microsoft.EntityFrameworkCore;
 using System;
 

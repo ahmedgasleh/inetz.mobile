@@ -1,4 +1,4 @@
-﻿using inetz.auth.dbcontext.models;
+﻿using inetz.auth.dbcontext.models.auth;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Cryptography;
 using System.Text;

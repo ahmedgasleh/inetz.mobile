@@ -1,4 +1,4 @@
-﻿namespace inetz.auth.dbcontext.models
+﻿namespace inetz.auth.dbcontext.models.auth
 {
     public partial class RefreshToken
     {

@@ -5,6 +5,7 @@ using inetz.ifinance.app.Models;
 using inetz.ifinance.app.Services;
 using inetz.ifinance.app.Services.Interfaces;
 using inetz.ifinance.app.Views;
+
 using System.Text.Json;
 
 
@@ -42,50 +43,57 @@ namespace inetz.ifinance.app.ViewModels
         [ObservableProperty]
         private string? errorMessage;
 
+        [ObservableProperty]
+        private bool isBusy = false;
 
 
-        [RelayCommand] //(CanExecute = nameof(CanNext))] when implement validation
+
+        [RelayCommand(CanExecute = nameof(CanComplete))]
         public async Task CompleteAsync ()
         {
+            if (IsBusy)
+                return;
+
             try
             {
+                IsBusy = true;
+                ErrorMessage = string.Empty;
+                CompleteCommand.NotifyCanExecuteChanged();
+
                 var result = await _api.PostAsync<object>("api/auth/register2", new UpdateProfile
                 {
-                    LastName = LastName!,
-                    FirstName = FirstName!,
-                    Address = Address!,
-                    UserId = UserId!
-
+                    LastName = LastName?.Trim() ?? string.Empty,
+                    FirstName = FirstName?.Trim() ?? string.Empty,
+                    Address = Address?.Trim() ?? string.Empty,
+                    UserId = UserId?.Trim() ?? string.Empty
                 });
 
-                if (!result.IsSuccess)
+                if (result?.IsSuccess != true)
                 {
-                    // show server-side validation error (e.g., email already exists)
-                    ErrorMessage = result.Error ?? "Server rejected the request.";
+                    ErrorMessage = result?.Error ?? "Server rejected the request.";
                     return;
                 }
 
-                var data = JsonSerializer.Deserialize<dynamic>(result.Data.ToString());
-
                 await _navigationService.GoToLogin("login");
-
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
             }
+            finally
+            {
+                IsBusy = false;
+                CompleteCommand.NotifyCanExecuteChanged();
+            }
         }
 
-        //TDO make sure update contaims must have fields
-        private bool CanNext ()
+        private bool CanComplete ()
         {
-            //// Do simple checks only; avoid expensive regex on every keystroke.
-            //if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@")) return false;
-            //if (string.IsNullOrWhiteSpace(Password) || Password.Length < 6) return false;
-            //// Phone optional here — or do a very cheap check
-            //if (string.IsNullOrWhiteSpace(PhoneNumber)) return false;
-
-            return true;
+            return !IsBusy
+                && !string.IsNullOrWhiteSpace(FirstName)
+                && !string.IsNullOrWhiteSpace(LastName)
+                && !string.IsNullOrWhiteSpace(Address)
+                && !string.IsNullOrWhiteSpace(UserId);
         }
     }
 }

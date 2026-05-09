@@ -27,4 +27,9 @@ namespace inetz.ifinance.app.Models
         public bool IsLocked { get; set; }
         public int RemainingAttempts { get; set; }
     }
+
+    public class RegisterStep1Response
+    {
+        public string DeviceId { get; set; } = "";
+    }
 }

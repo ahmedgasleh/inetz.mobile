@@ -30,16 +30,31 @@
 
                 <!-- BIN dots -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="12">
-                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
-                           BackgroundColor="{Binding Dot1Color}" />
-                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
-                           BackgroundColor="{Binding Dot2Color}" />
-                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
-                           BackgroundColor="{Binding Dot3Color}" />
-                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
-                           BackgroundColor="{Binding Dot4Color}" />
-                    <Frame WidthRequest="14" HeightRequest="14" CornerRadius="7"
-                           BackgroundColor="{Binding Dot5Color}" />
+                    <Border WidthRequest="14"
+                        HeightRequest="14"
+                        BackgroundColor="{Binding Dot1Color}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 7" />
+                    <Border WidthRequest="14"
+                        HeightRequest="14"
+                        BackgroundColor="{Binding Dot2Color}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 7" />
+                    <Border WidthRequest="14"
+                        HeightRequest="14"
+                        BackgroundColor="{Binding Dot3Color}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 7" />
+                    <Border WidthRequest="14"
+                        HeightRequest="14"
+                        BackgroundColor="{Binding Dot4Color}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 7" />
+                    <Border WidthRequest="14"
+                        HeightRequest="14"
+                        BackgroundColor="{Binding Dot5Color}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 7" />
                 </HorizontalStackLayout>
 
                 <!-- Error -->

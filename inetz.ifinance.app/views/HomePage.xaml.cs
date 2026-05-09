@@ -6,7 +6,7 @@ namespace inetz.ifinance.app.Views;
 
 public partial class HomePage : ContentPageBase
 {
-	public ObservableCollection<Account> Accounts { get; set; }
+	public ObservableCollection<Account>? Accounts { get; set; }
 	
     public HomePage()
 	{

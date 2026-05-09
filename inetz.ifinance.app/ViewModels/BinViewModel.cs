@@ -34,7 +34,7 @@ namespace inetz.ifinance.app.ViewModels
 
         [ObservableProperty]
         [NotifyCanExecuteChangedFor(nameof(AddDigitCommand))]
-        private string bin = string.Empty;
+        private string? bin = string.Empty;
 
         [ObservableProperty]
         private bool isBusy;
@@ -47,11 +47,11 @@ namespace inetz.ifinance.app.ViewModels
 
         public event Action<bool>? CloseRequested;
 
-        public Color Dot1Color => Bin.Length >= 1 ? Colors.Black : Colors.LightGray;
-        public Color Dot2Color => Bin.Length >= 2 ? Colors.Black : Colors.LightGray;
-        public Color Dot3Color => Bin.Length >= 3 ? Colors.Black : Colors.LightGray;
-        public Color Dot4Color => Bin.Length >= 4 ? Colors.Black : Colors.LightGray;
-        public Color Dot5Color => Bin.Length >= 5 ? Colors.Black : Colors.LightGray;
+        public Color Dot1Color => Bin?.Length >= 1 ? Colors.Black : Colors.LightGray;
+        public Color Dot2Color => Bin?.Length >= 2 ? Colors.Black : Colors.LightGray;
+        public Color Dot3Color => Bin?.Length >= 3 ? Colors.Black : Colors.LightGray;
+        public Color Dot4Color => Bin?.Length >= 4 ? Colors.Black : Colors.LightGray;
+        public Color Dot5Color => Bin?.Length >= 5 ? Colors.Black : Colors.LightGray;
 
        
 
@@ -102,11 +102,11 @@ namespace inetz.ifinance.app.ViewModels
                 var result = await _api.PostAsync<object>("api/auth/verifyBin", new VerifyBinRequest
                 { 
                 
-                    UserId = UserId,
-                    Bin = Bin
+                    UserId = UserId ?? string.Empty,
+                    Bin = Bin ?? string.Empty
                 });
 
-                var data = JsonSerializer.Deserialize<dynamic>(result?.Data?.ToString());
+                var data = JsonSerializer.Deserialize<dynamic>(result?.Data?.ToString() ?? string.Empty);
 
                 var isLocked = data?.GetProperty("isLocked").GetBoolean();
                 var binValidated = data?.GetProperty("success").GetBoolean();

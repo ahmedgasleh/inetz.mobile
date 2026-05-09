@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace inetz.ifinance.dbcontext.Models
+namespace inetz.auth.dbcontext.models.auth
 {
     public class UserRegistration
     {

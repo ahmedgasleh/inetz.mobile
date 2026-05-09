@@ -75,6 +75,7 @@ namespace inetz.ifinance.app
             builder.Services.AddTransient<ApiService>();
             builder.Services.AddSingleton<AuthService>();
             builder.Services.AddSingleton<DeviceService>();
+            builder.Services.AddSingleton<ICameraService, CameraService>();
 
             return builder;
         }

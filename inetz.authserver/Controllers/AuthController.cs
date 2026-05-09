@@ -1,18 +1,17 @@
 ﻿using Azure.Core;
 using inetz.auth.dbcontext.data;
-using inetz.auth.dbcontext.models;
+using inetz.auth.dbcontext.models.auth;
 using inetz.auth.dbcontext.services;
 using inetz.authserver.helpers;
 using inetz.authserver.models;
 using inetz.authserver.services;
-using inetz.ifinance.dbcontext.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text.Json.Nodes;
+using System.Text.Json.Nodes; 
 
 namespace inetz.authserver.Controllers
 {
@@ -34,7 +33,7 @@ namespace inetz.authserver.Controllers
         [HttpGet("exist")]
         public async Task<IActionResult> UserExist ( [FromQuery] string userId )
         {
-            var user = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.UserId == userId));
+            var user = await _db.UserProfiles.FirstOrDefaultAsync(u => u.UserId == userId);
             if (user != null)
                 return Ok(new { exists = true });
             else
@@ -46,33 +45,40 @@ namespace inetz.authserver.Controllers
         [HttpPost("register1")]
         public async Task<IActionResult> Register ( [FromBody] UserProfile userProfile )
         {
-            if (string.IsNullOrWhiteSpace( userProfile.UserId) || string.IsNullOrWhiteSpace(userProfile.UserEmail) || string.IsNullOrWhiteSpace(userProfile.UserPassWord))
-                return BadRequest("Your user ID, Email or Password cannot be null");
-
-            if (userProfile != null)
+            if (ModelState.IsValid)
             {
-                var existRecord = await Task.Run(() => _db.UserProfiles.Any(u => u.UserId == userProfile.UserId));
+                if (string.IsNullOrWhiteSpace(userProfile.UserId) || string.IsNullOrWhiteSpace(userProfile.UserEmail) || string.IsNullOrWhiteSpace(userProfile.UserPassWord))
+                    return BadRequest("Your user ID, Email or Password cannot be null");
 
-                if(existRecord) return BadRequest("Your user ID (Phone Number) Already exist");
+                if (userProfile != null)
+                {
+                    var existRecord = await _db.UserProfiles.AnyAsync(u => u.UserId == userProfile.UserId);
+
+                    if (existRecord) return BadRequest("Your user ID (Phone Number) Already exist");
 
 
-                // Hash password before saving
-                userProfile.UserPassWord = PasswordHelper.HashPassword(userProfile, userProfile.UserPassWord);
-                userProfile.DeviceId = Guid.NewGuid().ToString();
-                userProfile.DeviceHash = PasswordHelper.HashDevice(userProfile, userProfile.DeviceId);
+                    // Hash password before saving
+                    userProfile.UserPassWord = PasswordHelper.HashPassword(userProfile, userProfile.UserPassWord);
+                    userProfile.DeviceId = Guid.NewGuid().ToString();  //TDO make sure new user device creared once and not change on every registration
+                    userProfile.DeviceHash = PasswordHelper.HashDevice(userProfile, userProfile.DeviceId);
 
-                _db.UserProfiles.Add(userProfile);
-                _db.SaveChanges();
+                    _db.UserProfiles.Update(userProfile);
+                    _db.SaveChanges();
 
-                // After SaveChanges, EF fills in identity columns (like Id).
-                Guid newId = userProfile.Id;
+                    // After SaveChanges, EF fills in identity columns (like Id).
+                    Guid newId = userProfile.Id;
 
-                // Now you can retrieve it again if needed:
-                UserProfile createdRecord = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.Id == newId)) ?? new UserProfile();
+                    // Now you can retrieve it again if needed:
+                    UserProfile createdRecord = await _db.UserProfiles.FirstOrDefaultAsync(u => u.Id == newId) ?? new UserProfile();
 
-                //return Ok(createdRecord);
+                    //return Ok(createdRecord);
 
-                return new JsonResult(createdRecord);
+                    return CreatedAtAction(nameof(UserExist), new { userId = createdRecord.UserId }, createdRecord);
+
+                    //return new JsonResult(createdRecord);
+
+                }
+                else return BadRequest();
 
             }
             else return BadRequest();
@@ -87,7 +93,7 @@ namespace inetz.authserver.Controllers
         {
             if (updateProfile != null)
             {
-                var createdRecord = await Task.Run(() => _db.UserProfiles.FirstOrDefault(u => u.UserId == updateProfile.UserId));
+                var createdRecord = await _db.UserProfiles.FirstOrDefaultAsync(u => u.UserId == updateProfile.UserId);
                 if (createdRecord != null)
                 {
                     createdRecord.FirstName = updateProfile.FirstName;
@@ -105,6 +111,7 @@ namespace inetz.authserver.Controllers
         public async Task<IActionResult> Login ( [FromBody] LoginDto dto )
         {
 
+            if(!ModelState.IsValid) return BadRequest();
 
             var user = _db.UserProfiles.FirstOrDefault(u => u.UserId == dto.UserId);
             if (user == null)
@@ -133,7 +140,9 @@ namespace inetz.authserver.Controllers
         [HttpPost("createBin")]
         public async Task<IActionResult> CreateBin ( [FromBody] LoginDto bin )
         {
-            var existRecord = await Task.Run(() => _db.UserProfiles.Any(u => u.UserId == bin.UserId  && u.DeviceId == bin.DeviceId));
+            if(!ModelState.IsValid) return BadRequest();
+
+            var existRecord = await _db.UserProfiles.AnyAsync(u => u.UserId == bin.UserId  && u.DeviceId == bin.DeviceId);
 
             if (existRecord) { 
 
@@ -154,7 +163,7 @@ namespace inetz.authserver.Controllers
             string inputHash = PasswordHelper.HashBin(request.Bin);
 
             user.BinHash = inputHash;
-            user.BinExpiresAt = DateTime.Now;
+            user.BinExpiresAt = DateTime.UtcNow.AddMinutes(10);
             user.BinAttempts = 0;
 
             await _db.SaveChangesAsync();
@@ -198,7 +207,7 @@ namespace inetz.authserver.Controllers
 
             // 5️⃣ Success → mark device trusted
            //user.BinHash = string.Empty;
-            user.BinExpiresAt = DateTime.Now;
+            user.BinExpiresAt = DateTime.UtcNow.AddMinutes(10);
             user.BinAttempts = 0;
             user.DeviceVerified = true;
 
@@ -220,7 +229,7 @@ namespace inetz.authserver.Controllers
                 var body = _configuration ["EmailOptions:BodyTextEmail01"]?.Replace("{data1}", link.Bin);
                 var mailRequest = new SendEmailRequest(user?.UserEmail ?? string.Empty, _configuration ["EmailOptions:Subject"] ?? string.Empty, body ?? string.Empty);
 
-                await Task.Run(() => mailService.SendEmailAsync(mailRequest).Wait()); 
+                await mailService.SendEmailAsync(mailRequest); 
                 
                 return Ok(new {});
 
@@ -242,6 +251,10 @@ namespace inetz.authserver.Controllers
         {
             var hash = _tokens.Hash(dto.RefreshToken);
             var token = await _db.RefreshTokens.FirstOrDefaultAsync(t => t.TokenHash == hash);
+
+            if (token == null) return Unauthorized(); 
+            
+            bool isActive = token.RevokedUtc == null && token.ExpiresUtc > DateTime.UtcNow; if (!isActive || token.DeviceId != dto.DeviceId) return Unauthorized();
 
             bool IsActive = token?.RevokedUtc == null && DateTime.UtcNow < token?.ExpiresUtc;
 
